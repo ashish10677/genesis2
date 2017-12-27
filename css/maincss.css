@@ -1,2 +1,33 @@
 
 
+html,body{
+    font-family: 'PT Sans Caption', sans-serif;
+    height: 100%;
+    width: 100%;    
+}
+
+.section {
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+}
+#home {
+    font-family: 'Bungee',cursive;
+    font-size: 40px;
+}
+
+li {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 23px;
+    padding-left: 30px;
+}
+#intro {
+    font-family: 'Bungee', cursive;
+    color: #353434; 
+}
+p {
+    font-size: 25px;
+}
+#foot {
+    font-size: 18px;
+}
