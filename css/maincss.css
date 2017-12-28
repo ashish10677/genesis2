@@ -18,16 +18,123 @@ html,body{
 
 li {
     font-family: 'PT Sans Caption', sans-serif;
-    font-size: 23px;
     padding-left: 30px;
+    font-size: 25px;
 }
 #intro {
     font-family: 'Bungee', cursive;
     color: #353434; 
 }
-p {
-    font-size: 25px;
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
 }
-#foot {
+.img-wing {
+    margin-right: 15px;
+    float: left;
+    width: 40%;
+    height: 40%;
+}
+p {
+    font-size: 28px;
+}
+
+footer {
+    padding:30px;
     font-size: 18px;
 }
+
+@media screen and (max-width: 1024px) {
+    #home {
+        font-size: 40px;
+        
+
+    }
+    
+    #li {
+        font-size: 23px;
+    }
+    
+    p {
+        font-size: 21px;
+    }
+
+    #foot {
+        font-size: 18px;
+    }
+    .display-3 {
+        font-size: 68px;
+    }
+    
+}
+    
+    @media screen and (max-width: 950px) {
+        #home {
+            font-size: 40px;
+        }
+        
+        #li {
+            font-size: 21px;
+        }
+        
+        p {
+            font-size: 18.5px;
+        }
+    
+        #foot {
+            font-size: 15px;
+        }
+        .display-3 {
+            font-size: 60px;
+        }
+    
+    }
+    
+    
+    @media screen and (max-width: 650px) {
+        #home {
+            font-size: 40px;
+            
+            
+        }
+        
+        #li {
+            font-size: 20px;
+        }
+        
+        p {
+            font-size: 17px;
+        }
+    
+        #foot {
+            font-size: 12px;
+        }
+        .display-3 {
+            font-size: 48px;
+        }
+    
+    }
+    
+    @media screen and (max-width: 480px) {
+        #home {
+            font-size: 40px;
+            
+            
+        }
+        
+        #li {
+            font-size: 19px;
+        }
+        
+        p {
+            font-size: 15px;
+        }
+    
+        #foot {
+            font-size: 10px;
+        }
+        .display-3 {
+            font-size: 43px;
+        }
+    }
