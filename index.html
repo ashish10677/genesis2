@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/maincss.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee|PT+Sans+Caption" rel="stylesheet">   
-    <script type="text/javascript" src="particles.js"></script> 
+    <script type="text/javascript" src="js/particles.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/animate.css" /> 
 
     <style>
         #cult {
@@ -35,7 +36,7 @@
             -o-background-size: cover;
             background-size: cover;
             height:100%;
-            width:100%;
+            width:100%;             
             text-shadow: 2px 2px 2px #000000;
         }
         #sport {
@@ -140,7 +141,7 @@
             </div>
         <div class="container">
         <div class="display-3">Technical Wing</div>
-            <div class="">
+            <div class="content">
                 <br>
                 <p class=""><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
                 <br>
@@ -152,7 +153,7 @@
     <section id="cult" class="section text-light" >
         <div class="container">
             <div class="display-3">Cultural Wing</div>
-            <div>
+            <div class="content">
                 <br>
                 <p><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
                 <br>
@@ -165,7 +166,7 @@
     <section id="soc" class="section bg-danger text-light" >
         <div class="container">
             <div class="display-3">Social Wing</div>
-            <div>
+            <div class="content">
                 <br>
                 <p><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
                 <br>
@@ -177,7 +178,7 @@
     <section id="sport" class="section bg-success text-light" >
         <div class="container" >
             <div class="display-3">Sports Wing</div>
-            <div>
+            <div class="content">
                 <br>
                 <p><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
                 <br>
@@ -214,7 +215,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/viewportchecker.js"></script>
     <script>
         $('body').scrollspy({
             target:'#myNav'
@@ -230,6 +231,12 @@
             });
         })
 
+        jQuery(document).ready(function() {
+	        jQuery('.content').addClass("hidden").viewportChecker({
+	            classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
+	            offset: 100    
+	        });   
+        });
     </script>
   </body>
 </html>
