@@ -96,9 +96,7 @@ footer {
     
     @media screen and (max-width: 650px) {
         #home {
-            font-size: 40px;
-            
-            
+            font-size: 35px;
         }
         
         #li {
@@ -113,16 +111,14 @@ footer {
             font-size: 12px;
         }
         .display-3 {
-            font-size: 48px;
+            font-size: 35px;
         }
     
     }
     
     @media screen and (max-width: 480px) {
         #home {
-            font-size: 40px;
-            
-            
+            font-size: 25px;
         }
         
         #li {
@@ -130,14 +126,18 @@ footer {
         }
         
         p {
-            font-size: 15px;
+            font-size: 65%;
         }
     
         #foot {
             font-size: 10px;
         }
         .display-3 {
-            font-size: 43px;
+            font-size: 25px;
+        }
+        #intro {
+            font-size: 35px;
+            text-align: center;
         }
     }
     
