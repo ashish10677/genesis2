@@ -4,18 +4,22 @@
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>genesis</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   <style>
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+     width:100%;
+     height:100%;
   }
   h2 {
       font-size: 24px;
@@ -31,13 +35,7 @@
       font-weight: 400;
       margin-bottom: 30px;
   }  
-  .jumbotron {
-      background-image: url("file:///home/ankita/Desktop/back.jpg");
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Barrio, sans-serif;
-      height:675px;
-  }
+ 
      .container-fluid {
       padding: 60px 50px;
   }
@@ -191,9 +189,7 @@
         font-size: 150px;
     }
   }
-    .card1{
-      display:inline;
-    }
+   
     .glyphicon-chevron-left{
       color:#000000;
       float:right;
@@ -262,11 +258,45 @@ color:#808080;
 	
 	
 }
-
- 
+     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #fff;
+      height: 100%;
+      margin-top:30px;
+      border-radius:5px;
+   }
+    .sidenav p{
+      word-wrap:break-word;
+    }
+    
+   .bg-1{
+      background-image:url("back.jpg");
+      
+     
+    }
+     .screen1 h1{
+      font-family: Barrio, sans-serif;
+      color:#ffffff;
+       word-wrap:break-word;
+       margin-top:30px;
+    }
+  #members .container p,h4{
+    word-wrap:break-word;
+    }
+     #events .container p{
+    word-wrap:break-word;
+       
+    }
+    .card .card-block {max-height:300px;overflow:auto;}
+    
+  
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60"  >
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -276,7 +306,7 @@ color:#808080;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <img src="file:///home/ankita/Downloads/logo.png" height="50px" width="50px" align="left">
+      <img src="logo.png" height="50px" width="50px" align="left">
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -284,135 +314,168 @@ color:#808080;
         <li><a href="social.html">social wing</a></li>
         <li><a href="sports.html">sports wing</a></li>
         <li><a href="#events">events</a></li>
-        <li><a href="#register">register</a></li>
+        <li><a href="#members">members</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-<div class="jumbotron text-center">
-  <h1>Technical wing</h1> 
-  <div class="container">
-    <div class="current">
-    <div class="text-block">
-      <p>current activities</p>
-      </div>
-       
-    </div>
-    </div>
-</div>
-
-
-<!-- Container (About Section) -->
-	
-  
+ 
+ <div class="screen1">
+ <div class="container-fluid bg-1">    
    
+   <div class="row">
+   
+    <div class="col-xs-5 col-sm-2 sidenav text-center">
+      <p>event1<br>event2<br>event3</p>
+    </div>
+    <div class="col-xs-7 col-sm-10 text-center"  > 
+      <h1>Technical wing</h1>
+      </div>
+   </div>  
+  </div>
+ </div>
+ <!-- Container (events Section) -->
+<div id="events" class="container-fluid bg-grey">
 
-
-    
-
-<!-- Container (Services Section) -->
-
-
-<!-- Container (Portfolio Section) -->
-<div id="events"class="container-fluid text-center bg-grey">
-
-
-<div class="cards">
-  
-  <div class="w3 panel w3-border w3-hover-border-black">
-        <div class="card text-right" style="width:1000px">
-        <div class="card1">
+   <div class="container ">
+         <div class="card text-center" style="width:50%">
+       
           <div class="card-body">
             <h4 class="card-title">Event Name</h4>
             <p class="card-text">Date</p>
 		        <p class="card-text">timing</p>
 			      <p class="card-text">event co-ordinators contact info</p>
             <p class="card-text">description of the event</p>
-          </div>
-
-          </div>
         </div>
-      </div>
-   </div>
-    <div class="w3 panel w3-border w3-hover-border-green">
-       <div class="card text-right" style="width:1000px">
+        </div>
+        <div class="card text-center" style="width:50%">
         
-          <div class="card-body">
+           <div class="card-body">
             <h4 class="card-title">Event Name</h4>
             <p class="card-text">Date</p>
 		        <p class="card-text">timing</p>
 			      <p class="card-text">event co-ordinators contact info</p>
 	        	<p class="card-text">description of the event</p>
-
-          </div>
-      </div>
-   </div>
-   <div class="w3 panel w3-border w3-hover-border-green">
-      <div class="card text-right" style="width:1000px">
-   
+         </div>
+        </div>
+        <div class="card text-center" style="width:50%">
          <div class="card-body">
           <h4 class="card-title">Event Name</h4>
           <p class="card-text">Date</p>
 		      <p class="card-text">timing</p>
 			    <p class="card-text">event co-ordinators contact info</p>
 	        <p class="card-text">description of the event</p>
-
-        </div>
+         </div>
+       </div>
+   </div> 
+  </div>
+ <div id="members" class="container-fluid">
+   <h1>Members</h1>
+   
+  <div class="row">
+    <div class="col-sm-3 ">
+   <div class="container">
+     <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+       </div>
      </div>
+    </div>
+  </div>     
+     <div class="row">
+    <div class="col-sm-3 ">
+   <div class="container">
+      <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      </div>
+     </div>
+    </div>
+  </div>     
+        <div class="row">
+    <div class="col-sm-3  ">
+   <div class="container">
+     <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      </div>
+     </div>
+    </div>
+  </div>     
+           <div class="row">
+    <div class="col-sm-3  ">
+   <div class="container">
+    <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+     </div>
+     </div>
+    </div>
   </div>
-</div> 
-
-    <!-- Indicators -->
-   
-
-    <!-- Wrapper for slides -->
-   
-    <!-- Left and right controls -->
-
-  
-  
-
-<!-- Container (Pricing Section) -->
-<div class="form-edit">
-<div id="register"class="container-fluid">
-<div class="header">
-<h1>Registration Form</h1>
-</div>
-
-<form>
-  <div class="container">
+  <div class="container-fluid">
     
-    <input type="text" placeholder="Name" name="name" required>
-   <br>
-    
-    <input type="text" placeholder="USN" name="usn" required>
-<br>
-    
-    <input type="text" placeholder="Semester" name="semester" required>
-	 <br><br>
-	<select class="drop" name="Select Wings">
-	<option value="Select Wings">Select wings</option>
-	<option value="technical">Technical</option>
-	<option value="social">Social</option>
-	<option value="cultural">Cultural</option>
-	<option value="sports">Sports</option>
-	</select>
-
-	     
-    
-         <br>
-    
-     
-    <button type="submit" class="signupbtn">Submit</button>
-   
+  <div class="row">
+    <div class="col-sm-3 ">
+   <div class="container">
+      <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      </div>
+     </div>
+    </div>
+  </div>     
+     <div class="row">
+    <div class="col-sm-3 ">
+   <div class="container">
+    <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+       </div>
+     </div>
+    </div>
+  </div>     
+        <div class="row">
+    <div class="col-sm-3 ">
+   <div class="container">
+      <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+       </div>
+     </div>
+    </div>
+  </div>     
+   <div class="row">
+    <div class="col-sm-3">
+   <div class="container">
+     <div class="card" style="width:20%">
+      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      </div>
+     </div>
+    </div>
   </div>
- </form>
-</div>
-  </div>  
+ </div>  
+  <br>
+   <br>       
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container-fluid ">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -421,6 +484,7 @@ color:#808080;
       <p><span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
+    
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
@@ -430,12 +494,7 @@ color:#808080;
           <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
+    
     </div>
   </div>
 </div>
