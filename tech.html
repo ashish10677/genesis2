@@ -12,9 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   <style>
-  body {
+ html, body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
@@ -43,34 +44,11 @@
   .bg-grey {
       background-color: #f6f6f6;
   }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
+  
+ 
+  
+  
+ 
   .item h4 {
       font-size: 19px;
       line-height: 1.375em;
@@ -229,17 +207,7 @@ width:250px;
 height:30px;
 color:#808080;
 }
- .container   input[type=text] {
-    width:25 %;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    box-sizing: border-box;
-	border-radius: 4px;
-	border-bottom: 2px solid maroon;
-	font-family:calibri;
-	font-size: 18pt;
-}
+ 
 
 
 
@@ -275,6 +243,7 @@ color:#808080;
     
    .bg-1{
       background-image:url("back.jpg");
+     height:auto;
       
      
     }
@@ -291,8 +260,28 @@ color:#808080;
     word-wrap:break-word;
        
     }
-    .card .card-block {max-height:300px;overflow:auto;}
-    
+    @media (max-width: 480px) { 
+	
+	.card-deck-wrapper {margin-right:0;margin-left:0;}
+	.card-deck {
+	    display: block;
+	    width: 100%;
+	    margin-bottom: .75rem;
+	    table-layout: fixed;
+	    border-spacing: 1.25rem 0;
+	}
+	.card-deck .card {
+	    display: block;
+	    margin-bottom: .75rem;
+	    vertical-align: top;
+	}
+  
+  .card-deck .card:not(:first-child) {
+    margin-left: 0px;
+}
+  
+}
+   
   
   </style>
 </head>
@@ -338,165 +327,177 @@ color:#808080;
  <!-- Container (events Section) -->
 <div id="events" class="container-fluid bg-grey">
 
-   <div class="container ">
-         <div class="card text-center" style="width:50%">
+<div class="container">
+     
+  <div class="card-deck-wrapper">
+   <div class="card-deck">
        
-          <div class="card-body">
+     <div class="card text-center" >
+       <div class="card-block">
             <h4 class="card-title">Event Name</h4>
             <p class="card-text">Date</p>
 		        <p class="card-text">timing</p>
 			      <p class="card-text">event co-ordinators contact info</p>
             <p class="card-text">description of the event</p>
-        </div>
-        </div>
-        <div class="card text-center" style="width:50%">
-        
-           <div class="card-body">
+       </div>
+     </div>
+   
+       
+        <div class="card text-center" >
+          <div class="card-block">
             <h4 class="card-title">Event Name</h4>
             <p class="card-text">Date</p>
 		        <p class="card-text">timing</p>
 			      <p class="card-text">event co-ordinators contact info</p>
 	        	<p class="card-text">description of the event</p>
          </div>
-        </div>
-        <div class="card text-center" style="width:50%">
-         <div class="card-body">
+       </div>  
+        
+      <div class="card text-center" >
+         <div class="card-block">
           <h4 class="card-title">Event Name</h4>
           <p class="card-text">Date</p>
 		      <p class="card-text">timing</p>
 			    <p class="card-text">event co-ordinators contact info</p>
 	        <p class="card-text">description of the event</p>
          </div>
-       </div>
+       </div>      
+    
    </div> 
   </div>
+ </div>
+</div>
  <div id="members" class="container-fluid">
    <h1>Members</h1>
    
-  <div class="row">
-    <div class="col-sm-3 ">
-   <div class="container">
-     <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+<div class="card-deck-wrapper">
+   <div class="card-deck">
+ 
+     
+   <div class="card" >
+       <div class="card-block">
+         <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          </div>
+      </div>
+  </div>     
+   
+   
+      
+    <div class="card">
+       <div class="card-block">
+         <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          </div>
        </div>
+    </div>     
+     
+   
+     
+     <div class="card" >
+        <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>  
+        </div>
      </div>
-    </div>
-  </div>     
-     <div class="row">
-    <div class="col-sm-3 ">
-   <div class="container">
-      <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+ 
+       <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
       </div>
-     </div>
-    </div>
-  </div>     
-        <div class="row">
-    <div class="col-sm-3  ">
-   <div class="container">
-     <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      </div>
-     </div>
-    </div>
-  </div>     
-           <div class="row">
-    <div class="col-sm-3  ">
-   <div class="container">
-    <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-     </div>
-     </div>
-    </div>
+   
+     
   </div>
-  <div class="container-fluid">
+   </div>
+ 
+ <div class="card-deck-wrapper">
+   <div class="card-deck">
+     
+    <div class="card">
+          <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>
+          
+    <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>  
+   <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>
     
-  <div class="row">
-    <div class="col-sm-3 ">
-   <div class="container">
-      <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      </div>
-     </div>
-    </div>
-  </div>     
-     <div class="row">
-    <div class="col-sm-3 ">
-   <div class="container">
-    <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-       </div>
-     </div>
-    </div>
-  </div>     
-        <div class="row">
-    <div class="col-sm-3 ">
-   <div class="container">
-      <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-       </div>
-     </div>
-    </div>
-  </div>     
-   <div class="row">
-    <div class="col-sm-3">
-   <div class="container">
-     <div class="card" style="width:20%">
-      <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      </div>
-     </div>
-    </div>
-  </div>
- </div>  
-  <br>
-   <br>       
+    
+    
+  <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:100%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div> 
+ </div> 
+ </div>
+</div>
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid ">
+<div id="contact" class="container">
   <h2 class="text-center">CONTACT</h2>
-  <div class="row">
+   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
+     <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>DSI(ISE DEPT)</p>
       <p><span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
-    
-    <div class="col-sm-7 slideanim">
+  
+    <div class="col-sm-7 ">
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required><br>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+             <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+             </div>
+         </div>
         </div>
       </div>
-    
     </div>
-  </div>
+       
+    </div>
+ 
 </div>
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
