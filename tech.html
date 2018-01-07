@@ -3,19 +3,33 @@
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   <title>genesis</title>
+ 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/particles.js"></script>
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   <style>
-  body {
+ html, body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+     width:100%;
+     height:100%;
+   
   }
   h2 {
       font-size: 24px;
@@ -31,49 +45,18 @@
       font-weight: 400;
       margin-bottom: 30px;
   }  
-  .jumbotron {
-      background-image: url("file:///home/ankita/Desktop/back.jpg");
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Barrio, sans-serif;
-      height:675px;
-  }
+ 
      .container-fluid {
       padding: 60px 50px;
-  }
+       
+      
+       }
    
   .bg-grey {
       background-color: #f6f6f6;
   }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
-  .item h4 {
+  
+   .item h4 {
       font-size: 19px;
       line-height: 1.375em;
       font-weight: 400;
@@ -83,44 +66,7 @@
   .item span {
       font-style: normal;
   }
-  .panel {
-      border: 1px solid #f4511e; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
-      background-color: #fff !important;
-      color: #f4511e;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #f4511e !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
+  
   .navbar {
       margin-bottom: 0;
       background-color:  #1a1a1a;
@@ -176,24 +122,9 @@
       -webkit-transform: translateY(0%);
     }
   }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-    .card1{
-      display:inline;
-    }
+ 
+  
+   
     .glyphicon-chevron-left{
       color:#000000;
       float:right;
@@ -220,30 +151,20 @@
 }
    
 
-.header{
-font-family: calibri;
-font-size: 12pt;
-text-align: center;
-padding-top:20px;
-}
-select.drop{
-text-align:center;
-font-size:16pt;
-width:250px;
-height:30px;
-color:#808080;
-}
- .container   input[type=text] {
-    width:25 %;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border: none;
-    box-sizing: border-box;
-	border-radius: 4px;
-	border-bottom: 2px solid maroon;
-	font-family:calibri;
-	font-size: 18pt;
-}
+    .header{
+     font-family: calibri;
+     font-size: 12pt;
+     text-align: center;
+     padding-top:20px;
+    }
+  select.drop{
+   text-align:center;
+   font-size:16pt;
+   width:250px;
+   height:30px;
+   color:#808080;
+  }
+ 
 
 
 
@@ -259,14 +180,79 @@ color:#808080;
     
 	margin-left:450px;
 	margin-right: 450px;
-	
-	
 }
-
+    
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #fff;
+      height: 100%;
+      margin-top:30px;
+      border-radius:5px;
+   }
+   .row.content {height: 700px}
+     @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
  
+    .sidenav p{
+      word-wrap:break-word;
+    }
+    
+  .bg-1{
+        background-image: url('tech.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            text-shadow: 2px 2px 2px #000000;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+      
+     
+    }
+  
+    .bg-1 h1{
+      font-family: Barrio, sans-serif;
+      color:#ffffff;
+       word-wrap:break-word;
+       margin-top:30px;
+       
+    }
+  
+      
+    
+  #members .container p,h4{
+    word-wrap:break-word;
+    }
+     #events .container a{
+    word-wrap:break-word;
+       display:inline;
+       
+    }
+    #techtext {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+	
+    
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60"  >
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -276,7 +262,7 @@ color:#808080;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <img src="file:///home/ankita/Downloads/logo.png" height="50px" width="50px" align="left">
+      <img src="logo.png" height="50px" width="50px" align="left">
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -284,160 +270,233 @@ color:#808080;
         <li><a href="social.html">social wing</a></li>
         <li><a href="sports.html">sports wing</a></li>
         <li><a href="#events">events</a></li>
-        <li><a href="#register">register</a></li>
+        <li><a href="#members">members</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
+ 
+ 
 
-<div class="jumbotron text-center">
-  <h1>Technical wing</h1> 
-  <div class="container">
-    <div class="current">
-    <div class="text-block">
-      <p>current activities</p>
-      </div>
-       
-    </div>
-    </div>
-</div>
-
-
-<!-- Container (About Section) -->
-	
-  
-   
-
-
+   <div class="container-fluid bg-1 text-center">  
+       <div id="techtext">
+            <script type="text/javascript">
+                particlesJS("techtext", { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+            </script>
+        </div>
     
+      <h1>Technical wing</h1>
+    </div>
 
-<!-- Container (Services Section) -->
-
-
-<!-- Container (Portfolio Section) -->
-<div id="events"class="container-fluid text-center bg-grey">
-
-
-<div class="cards">
+ 
+ 
   
-  <div class="w3 panel w3-border w3-hover-border-black">
-        <div class="card text-right" style="width:1000px">
-        <div class="card1">
-          <div class="card-body">
+ <!-- Container (events Section) -->
+<div id="events" class="container-fluid bg-grey">
+  
+    <div class="row content">
+       
+       <div class="col-sm-3  sidenav text-center" >
+         <ul>
+           <li><a href="#" class="nav-link">Nav</a></li>
+          <li><a href="#" class="nav-link">Nav</a></li>
+           <li><a href="#" class="nav-link">Nav</a></li>
+           <li><a href="#" class="nav-link">Nav</a></li>
+           <li><a href="#" class="nav-link">Nav</a></li>
+         </ul>
+       </div>
+       
+
+     
+       <div class="col-sm-9">
+         
+         <div class="card text-center"   >
+      
             <h4 class="card-title">Event Name</h4>
             <p class="card-text">Date</p>
 		        <p class="card-text">timing</p>
-			      <p class="card-text">event co-ordinators contact info</p>
+			      <p class="card-text">event co-ordinators contact info </p>
             <p class="card-text">description of the event</p>
-          </div>
-
-          </div>
-        </div>
-      </div>
-   </div>
-    <div class="w3 panel w3-border w3-hover-border-green">
-       <div class="card text-right" style="width:1000px">
-        
-          <div class="card-body">
+         </div>
+          
+       </div>
+       <div class="col-sm-9 ">
+         <div class="card text-center"  >
+         
             <h4 class="card-title">Event Name</h4>
             <p class="card-text">Date</p>
 		        <p class="card-text">timing</p>
 			      <p class="card-text">event co-ordinators contact info</p>
 	        	<p class="card-text">description of the event</p>
-
           </div>
-      </div>
-   </div>
-   <div class="w3 panel w3-border w3-hover-border-green">
-      <div class="card text-right" style="width:1000px">
-   
-         <div class="card-body">
+         </div>
+      
+       <div class="col-sm-9">
+         <div class="card text-center " >
+         
           <h4 class="card-title">Event Name</h4>
           <p class="card-text">Date</p>
 		      <p class="card-text">timing</p>
 			    <p class="card-text">event co-ordinators contact info</p>
 	        <p class="card-text">description of the event</p>
+         </div>
+       </div>
+        <div class="col-sm-9">
+         <div class="card text-center " >
+         
+          <h4 class="card-title">Event Name</h4>
+          <p class="card-text">Date</p>
+		      <p class="card-text">timing</p>
+			    <p class="card-text">event co-ordinators contact info</p>
+	        <p class="card-text">description of the event</p>
+         </div>
+       </div>
+      
+      
+     
+     </div>
+    </div>      
+  
+   
 
+  
+  
+  <br> <br> <br> <br> <br>
+
+ <div id="members" class="container-fluid ">
+   <h1>Members</h1>
+   
+<div class="card-deck-wrapper">
+   <div class="card-deck">
+ 
+     
+   <div class="card" >
+       <div class="card-block">
+         <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          </div>
+      </div>
+  </div>     
+   
+   
+      
+    <div class="card">
+       <div class="card-block">
+         <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          </div>
+       </div>
+    </div>     
+     
+   
+     
+     <div class="card" >
+        <div class="card-block" >
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>  
         </div>
      </div>
-  </div>
-</div> 
-
-    <!-- Indicators -->
+ 
+       <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>
    
-
-    <!-- Wrapper for slides -->
-   
-    <!-- Left and right controls -->
-
-  
-  
-
-<!-- Container (Pricing Section) -->
-<div class="form-edit">
-<div id="register"class="container-fluid">
-<div class="header">
-<h1>Registration Form</h1>
-</div>
-
-<form>
-  <div class="container">
-    
-    <input type="text" placeholder="Name" name="name" required>
-   <br>
-    
-    <input type="text" placeholder="USN" name="usn" required>
-<br>
-    
-    <input type="text" placeholder="Semester" name="semester" required>
-	 <br><br>
-	<select class="drop" name="Select Wings">
-	<option value="Select Wings">Select wings</option>
-	<option value="technical">Technical</option>
-	<option value="social">Social</option>
-	<option value="cultural">Cultural</option>
-	<option value="sports">Sports</option>
-	</select>
-
-	     
-    
-         <br>
-    
      
-    <button type="submit" class="signupbtn">Submit</button>
-   
   </div>
- </form>
+   </div>
+ 
+ <div class="card-deck-wrapper">
+   <div class="card-deck">
+     
+    <div class="card">
+          <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>
+          
+    <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>  
+   <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div>
+    
+    
+    
+  <div class="card">
+         <div class="card-block">
+          <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+           <div class="card-body">
+           <h4 class="card-title">John Doe</h4>
+           <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+           </div>
+        </div>
+      </div> 
+ </div> 
+ </div>
 </div>
-  </div>  
+    
+ <br> <br> <br> <br> <br> <br>
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
+<div id="contact" class="container">
   <h2 class="text-center">CONTACT</h2>
-  <div class="row">
+   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
+     <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>DSI(ISE DEPT)</p>
       <p><span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
       <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
     </div>
-    <div class="col-sm-7 slideanim">
+  
+    <div class="col-sm-7 ">
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required><br>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+          <div class="row">
+             <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+             </div>
+         </div>
         </div>
       </div>
     </div>
-  </div>
+       
+    </div>
+ 
 </div>
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
