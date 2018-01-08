@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
@@ -177,7 +177,6 @@
       height: 30px;
       color: #808080;
     }
-    /* Extra styles for the cancel button */
 
     .signupbtn {
       padding: 14px 20px;
@@ -241,13 +240,17 @@
     }
 
     .bg-1 h1 {
-      font-family: Barrio, sans-serif;
+      font-family: Bungee, cursive;
       color: #ffffff;
+      position: relative;
       word-wrap: break-word;
-      margin-top: 30px;
+      top: 48%;
     }
 
-
+    .card {
+      margin: 15px;
+      padding: 30px;
+    }
 
     #members .container p,
     h4 {
@@ -264,19 +267,22 @@
       width: 100%;
       height: 100%;
     }
+    #sideNavBar {
+      list-style-type: none;
+    }
   </style>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
-      // Initialize Firebase
-      var config = {
-          apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
-          authDomain: "ashish10677-ce652.firebaseapp.com",
-          databaseURL: "https://ashish10677-ce652.firebaseio.com",
-          projectId: "ashish10677-ce652",
-          storageBucket: "ashish10677-ce652.appspot.com",
-          messagingSenderId: "1059927379248"
-      };
-      firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
+      authDomain: "ashish10677-ce652.firebaseapp.com",
+      databaseURL: "https://ashish10677-ce652.firebaseio.com",
+      projectId: "ashish10677-ce652",
+      storageBucket: "ashish10677-ce652.appspot.com",
+      messagingSenderId: "1059927379248"
+    };
+    firebase.initializeApp(config);
   </script>
 </head>
 
@@ -435,7 +441,7 @@
       </script>
     </div>
 
-    <h1>Technical wing</h1>
+    <h1 style="font-size: 100px;">Technical wing</h1>
   </div>
 
   <!-- Container (events Section) -->
@@ -443,38 +449,23 @@
 
     <div class="row content">
 
-      <div class="col-sm-3  sidenav text-center">
-        <ul>
-          <li>
-            <a href="#" class="nav-link">Nav</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Nav</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Nav</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Nav</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">Nav</a>
-          </li>
+      <div class="col-sm-2 sidenav text-center sticky-top">
+        <ul id="sideNavBar">
         </ul>
       </div>
 
 
-
-      <div class="col-sm-9">
+      <div class="col-sm-10" style="float: right">
         <div class="card" id="content1"></div>
       </div>
 
-      <div class="col-sm-9">
+      <div class="col-sm-10" style="float: right">
         <div class="card" id="content2"></div>
       </div>
 
-      <div class="col-sm-9">
+      <div class="col-sm-10" style="float: right">
         <div class="card" id="content3"></div>
+
       </div>
 
     </div>
@@ -495,7 +486,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -507,7 +498,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -519,7 +510,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -529,7 +520,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -540,13 +531,14 @@
 
       </div>
     </div>
-
+    <br>
+    <br>
     <div class="card-deck-wrapper">
       <div class="card-deck">
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -556,7 +548,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -565,19 +557,16 @@
         </div>
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
             </div>
           </div>
         </div>
-
-
-
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:60%">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -588,49 +577,40 @@
     </div>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <!-- Container (Contact Section) -->
-  <div id="contact" class="container">
-    <h2 class="text-center">CONTACT</h2>
-    <div class="row">
-      <div class="col-sm-5">
-        <p>Contact us and we'll get back to you within 24 hours.</p>
-        <p>
-          <span class="glyphicon glyphicon-map-marker"></span>DSI(ISE DEPT)</p>
-        <p>
-          <span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
-        <p>
-          <span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-      </div>
-
-      <div class="col-sm-7 ">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-            <br>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-            <br>
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <button class="btn btn-default pull-right" type="submit">Send</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
   <footer class="container-fluid text-center">
+    <div id="contact" class="container">
+      <h2 class="text-center">CONTACT</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <p>Contact us and we'll get back to you within 24 hours.</p>
+          <p>
+            <span class="glyphicon glyphicon-map-marker"></span>DSI(ISE DEPT)</p>
+          <p>
+            <span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
+          <p>
+            <span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-7 ">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <br>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+          <br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <a href="#myPage" title="To Top">
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
@@ -640,7 +620,6 @@
       var i = 1;
       firebase.database().ref().child('events/tech').limitToLast(3).once('value', function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
-
           var eventName = document.createElement('h1');
           var eventDate = document.createElement('h3');
           var eventDesc = document.createElement('p');
@@ -657,7 +636,26 @@
 
         });
       });
+      showNavBar();
+    }
 
+    function showNavBar() {
+      var i = 1;
+      firebase.database().ref().child('events/tech').once('value', function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+          var eventName = document.createElement('li');
+          var eventLink = document.createElement('a');
+          eventLink.setAttribute('href','#');
+          eventLink.setAttribute('class','nav-link');
+          var childData = childSnapshot.val();
+          eventLink.innerHTML = childData.name;
+
+          var unOrderedList = document.getElementById('sideNavBar');
+          eventName.appendChild(eventLink);
+          unOrderedList.appendChild(eventName);
+
+        });
+      });  
     }
     window.onload = showData();
   </script>
