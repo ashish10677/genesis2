@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>genesis</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/particles.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+    crossorigin="anonymous">
+  <style>
+    html,
+    body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+      width: 100%;
+      height: 100%;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .container-fluid {
+      padding: 60px 50px;
+    }
+
+    .bg-grey {
+      background-color: #f6f6f6;
+    }
+
+    .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+    }
+
+    .item span {
+      font-style: normal;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      background-color: #1a1a1a;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .navbar li a,
+    .navbar .navbar-brand {
+      color: #fff !important;
+    }
+
+    .navbar-nav li a:hover,
+    .navbar-nav li.active a {
+      color: #1a1a1a !important;
+      background-color: #fff !important;
+    }
+
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+
+    footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+
+    .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+
+
+
+    .glyphicon-chevron-left {
+      color: #000000;
+      float: right;
+    }
+
+    .current {
+      position: relative;
+      font-family: Arial;
+    }
+
+    .text-block {
+      position: absolute;
+      bottom: 20px;
+      right: 200px;
+      width: 1000px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    .header {
+      font-family: calibri;
+      font-size: 12pt;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    select.drop {
+      text-align: center;
+      font-size: 16pt;
+      width: 250px;
+      height: 30px;
+      color: #808080;
+    }
+
+    .signupbtn {
+      padding: 14px 20px;
+      background-color: #800000;
+      margin-left: 80px;
+      margin-top: 15px;
+      color: #FFFFFF;
+    }
+
+    .form-edit {
+
+      margin-left: 450px;
+      margin-right: 450px;
+    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+    .row {
+      height: 450px
+    }
+    /* Set gray background color and 100% height */
+
+    .sidenav {
+      padding-top: 20px;
+      background-color: #fff;
+      height: 100%;
+      margin-top: 30px;
+      border-radius: 5px;
+    }
+
+    .row.content {
+      height: 700px
+    }
+
+    @media screen and (max-width: 767px) {
+      .row.content {
+        height: auto;
+      }
+    }
+
+    .sidenav p {
+      word-wrap: break-word;
+    }
+
+    .bg-1 {
+      background-image: url('images/tech.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      text-shadow: 2px 2px 2px #000000;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .bg-1 h1 {
+      font-family: Bungee, cursive;
+      color: #ffffff;
+      position: relative;
+      word-wrap: break-word;
+      top: 48%;
+    }
+
+    .card {
+      margin: 15px;
+      padding: 30px;
+    }
+
+    #members .container p,
+    h4 {
+      word-wrap: break-word;
+    }
+
+    #events .container a {
+      word-wrap: break-word;
+      display: inline;
+    }
+
+    #techtext {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    #sideNavBar {
+      list-style-type: none;
+    }
+  </style>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
+      authDomain: "ashish10677-ce652.firebaseapp.com",
+      databaseURL: "https://ashish10677-ce652.firebaseio.com",
+      projectId: "ashish10677-ce652",
+      storageBucket: "ashish10677-ce652.appspot.com",
+      messagingSenderId: "1059927379248"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="images/logo.png" height="50px" width="50px" align="left">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="cultural.html">cultural wing</a>
+          </li>
+          <li>
+            <a href="social.html">social wing</a>
+          </li>
+          <li>
+            <a href="sports.html">sports wing</a>
+          </li>
+          <li>
+            <a href="#events">events</a>
+          </li>
+          <li>
+            <a href="#members">members</a>
+          </li>
+          <li>
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="container-fluid bg-1 text-center">
+    <div id="techtext">
+      <script type="text/javascript">
+        particlesJS("techtext", {
+          "particles": {
+            "number": {
+              "value": 80,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 0.5,
+              "random": false,
+              "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": true,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 6,
+              "direction": "none",
+              "random": false,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+      </script>
+    </div>
+
+    <h1 style="font-size: 100px;">Technical wing</h1>
+  </div>
+
+  <!-- Container (events Section) -->
+  <div id="events" class="container-fluid bg-grey">
+
+    <div class="row content">
+
+      <div class="col-sm-2 sidenav text-center sticky-top">
+        <ul id="sideNavBar">
+        </ul>
+      </div>
+
+
+      <div class="col-sm-10" style="float: right">
+        <div class="card" id="content1"></div>
+      </div>
+
+      <div class="col-sm-10" style="float: right">
+        <div class="card" id="content2"></div>
+      </div>
+
+      <div class="col-sm-10" style="float: right">
+        <div class="card" id="content3"></div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div id="members" class="container-fluid ">
+    <h1>Members</h1>
+
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+
+
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-block">
+            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <div id="contact" class="container">
+      <h2 class="text-center">CONTACT</h2>
+      <div class="row">
+        <div class="col-sm-5">
+          <p>Contact us and we'll get back to you within 24 hours.</p>
+          <p>
+            <span class="glyphicon glyphicon-map-marker"></span>DSI(ISE DEPT)</p>
+          <p>
+            <span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
+          <p>
+            <span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-sm-7 ">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <br>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+          <br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+  </footer>
+  <script>
+    function showData() {
+      var i = 1;
+      firebase.database().ref().child('events/tech').limitToLast(3).once('value', function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+          var eventName = document.createElement('h1');
+          var eventDate = document.createElement('h3');
+          var eventDesc = document.createElement('p');
+          var childData = childSnapshot.val();
+          eventDate.innerHTML = childData.date;
+          eventName.innerHTML = childData.name;
+          eventDesc.innerHTML = childData.desc;
+
+          var contentElement = document.getElementById('content' + i);
+          contentElement.appendChild(eventName);
+          contentElement.appendChild(eventDate);
+          contentElement.appendChild(eventDesc);
+          i++;
+
+        });
+      });
+      showNavBar();
+    }
+
+    function showNavBar() {
+      var i = 1;
+      firebase.database().ref().child('events/tech').once('value', function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
+          var eventName = document.createElement('li');
+          var eventLink = document.createElement('a');
+          eventLink.setAttribute('href','#');
+          eventLink.setAttribute('class','nav-link');
+          var childData = childSnapshot.val();
+          eventLink.innerHTML = childData.name;
+
+          var unOrderedList = document.getElementById('sideNavBar');
+          eventName.appendChild(eventLink);
+          unOrderedList.appendChild(eventName);
+
+        });
+      });  
+    }
+    window.onload = showData();
+  </script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    })
+  </script>
+
+</body>
+
+</html>
