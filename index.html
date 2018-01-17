@@ -1,242 +1,474 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
 <html lang="en">
-  <head>
-    <title>Genesis</title>
+<!--<![endif]-->
+
+<!-- Cloned by RabinsXP.com-->
+
+<head>
+    <title>GENESIS</title>
+
+    <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/maincss.css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee|PT+Sans+Caption" rel="stylesheet">   
-    <script type="text/javascript" src="js/particles.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/animate.css" /> 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-    <style>
-        #cult {
-            background-image: url('images/cultural.jpg');
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-attachment: fixed;       
-            webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            height:100%;
-            width:100%; 
-            text-shadow: 2px 2px 2px #000000;
-        }
-        #soc {
-            background-image: url('images/golden_and_blue-wallpaper-1920x1080.jpg');
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-attachment: fixed;       
-            webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            height:100%;
-            width:100%;             
-            text-shadow: 2px 2px 2px #000000;
-        }
-        #sport {
-            background-image: url('images/sport.jpg');
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-attachment: fixed;       
-            webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            height:100%;
-            width:100%; 
-            text-shadow: 2px 2px 2px #000000;
-            background-repeat: no-repeat;
-        }
-        #tech {
-            background-image: url('images/tech.jpg');
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-attachment: fixed;       
-            webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            height:100%;
-            width:100%; 
-            text-shadow: 2px 2px 2px #000000;
-            top:0;
-            right:0;
-            bottom:0;
-            left:0;
-            z-index:0; 
-        }
-        #mainslider {
-            background-image: url('images/mainslider.jpg');
-            height:100%;
-            width:100%; 
-            text-shadow: 2px 2px 2px #000000;
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-attachment: fixed;       
-            webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-    </style>
-  </head>
-  <body>
-    <nav id="myNav" class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
-        <img src="images/logo.png" width="53px" height="53px" >&nbsp;&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.html" id="home">Genesis</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarMain"><span class="navbar-toggler-icon" ></span></button>
-        <div class="collapse navbar-collapse" id="navBarMain">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" data-toggle="collapse" data-target="#navBarMain"><a href="#tech" class="nav-link" >Technical Wing</a></li>
-                <li class="nav-item" data-toggle="collapse" data-target="#navBarMain"><a href="#cult" class="nav-link" >Cultural Wing </a></li>
-                <li class="nav-item" data-toggle="collapse" data-target="#navBarMain"><a href="#soc" class="nav-link" >Social Wing</a></li>
-                <li class="nav-item" data-toggle="collapse" data-target="#navBarMain"><a href="#sport" class="nav-link" >Sports Wing</a></li>
-                <li class="nav-item" data-toggle="collapse" data-target="#navBarMain"><a href="#" class="nav-link">Alumnis</a></li>
-            </ul>
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS Header and Footer -->
+    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/plugins/animate.css">
+    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+    <link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|PT+Sans+Caption" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="wrapper" style="background-color: #f6f6f6">
+        <!--=== Header ===-->
+        <div class="header">
+            <div class="container">
+                <!-- Logo -->
+                <a class="logo" href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+                <!-- End Logo -->
+
+
+                <!-- Toggle get grouped for better mobile display -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+                <!-- End Toggle -->
+            </div>
+            <!--/end container-->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <!-- Home -->
+                        <li>
+                            <a href="#tech" class="nav-link">Technical Wing</a>
+                        </li>
+                        <li>
+                            <a href="#cult" class="nav-link">Cultural Wing </a>
+                        </li>
+                        <li>
+                            <a href="#soc" class="nav-link">Social Wing</a>
+                        </li>
+                        <li>
+                            <a href="#sport" class="nav-link">Sports Wing</a>
+                        </li>
+                        <li>
+                            <a href="alumnis.html" class="nav-link">Alumnis</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/end container-->
+            </div>
+            <!--/navbar-collapse-->
         </div>
-    </nav> 
+        <!--=== End Header ===-->
 
-    <section id="mainslider" class="jumbotron section" >
-        <div class="center" >
-            <div class="container text-sm-center">
-                <div class="display-2" id="intro">Genesis Forum</div>
-                <br><br>
-                <div id="slider" class="carousel slide" data-ride="carousel">
+        <!--=== Breadcrumbs v1 ===-->
+        <div class="breadcrumbs-v1">
+            <div class="container">
+                <h1>GENESIS</h1>
+            </div>
+        </div>
+        <!--=== End Breadcrumbs v1 ===-->
 
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="images/slider.png" width="1150" height="550">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/slider.png" width="1150" height="550">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/slider.png" width="1150" height="550">
-                      </div>
+        <!--=== Blog Posts ===-->
+        <div class="container content-md">
+            <!-- News v3 -->
+            <div class="row margin-bottom-20" style="background-color: #ffffff; padding-bottom: 25px; padding-top: 25px">
+                <div class="col-sm-5 sm-margin-bottom-20">
+                    <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                            <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                            <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/slider.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="images/slider.png" alt="">
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#slider" data-slide="prev">
-                      <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#slider" data-slide="next">
-                      <span class="carousel-control-next-icon"></span>
-                    </a>
+                </div>
+                <div class="col-sm-7">
+                    <div class="news-v3">
+                        <h2>
+                            GENESIS FORUM
+                        </h2>
+                        <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet
+                            molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras
+                            erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="tech" class="section bg-dark text-light" >
-            <div id="techtext">
-                    <script type="text/javascript">
-                        particlesJS("techtext", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
-                    </script>
-            </div>
-        <div class="container">
-        <div class="display-3">Technical Wing</div>
-            <div class="content">
-                <br>
-                <p class=""><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
-                <br>
-                <a class="btn btn-outline-primary text-light" style="float:right;position:relative">Explore</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="cult" class="section text-light" >
-        <div class="container">
-            <div class="display-3">Cultural Wing</div>
-            <div class="content">
-                <br>
-                <p><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
-                <br>
-                <a class="btn btn-outline-primary text-light" style="float:right">Explore</a>
-            </div>
-        </div>    
-    </section>
+            <!--/end row-->
+            <!-- End News v3 -->
 
-
-    <section id="soc" class="section bg-danger text-light" >
-        <div class="container">
-            <div class="display-3">Social Wing</div>
-            <div class="content">
-                <br>
-                <p><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
-                <br>
-                <a class="btn btn-outline-primary text-light" style="float:right">Explore</a>
+            <div id="tech" class="clearfix margin-bottom-20">
+                <hr style="border-color:#ffffff">
             </div>
-        </div>
-    </section>
 
-    <section id="sport" class="section bg-success text-light" >
-        <div class="container" >
-            <div class="display-3">Sports Wing</div>
-            <div class="content">
-                <br>
-                <p><img src="images/wings.png" class="img-wing"> Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten, then they are still using her.Far far away, It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a smbehind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden</p>
-                <br>
-                <a class="btn btn-outline-primary text-light" style="float:right">Explore</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-dark text-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-md-center">
-                    <h3>Need more info?</h3>
-                    <div id="foot">Get in touch: 8197273832</div>
+            <!-- News v3 -->
+            <div class="row margin-bottom-20" style="background-color: #ffffff; padding-bottom: 12px; padding-top: 12px" >
+                <div class="col-sm-5 sm-margin-bottom-20">
+                    <img class="img-responsive" src="images/tech.jpg" alt="">
                 </div>
-                <div class="col-md-4 text-md-center">
-                    <h3>Join Now</h3>
-                    <div class="btn btn-primary">Go Here</div>
-                </div>
-                <div class="col-md-4 text-md-center">
-                    <h3>Copyright</h3>
-                    <div id="foot">&copy; 2017</div>
+                <div class="col-sm-7">
+                    <div class="news-v3">
+                        <h2>
+                            TECHNICAL WING
+                        </h2>
+                        <p>Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten,
+                            then they are still using her.Far far away, It is a paradisematic country, in which roasted parts
+                            of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind
+                            texts it is an almost unorthographic life One day however a smbehind the word mountains, far
+                            from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in
+                            Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
+                            DudenNullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus,
+                            imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin
+                            sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus
+                            efficitur...
+                        </p>
+                        <br>
+                        <a class="btn btn-outline-primary text-light" style="float:right;position:relative" href="tech.html">Explore</a>
+                    </div>
                 </div>
             </div>
+            <!--/end row-->
+            <!-- End News v3 -->
+
+            <div id="cult" class="clearfix margin-bottom-20">
+                <hr style="border-color:#ffffff">
+            </div>
+            <!-- News v3 -->
+            <div class="row margin-bottom-20" style="background-color: #ffffff; padding-bottom: 12px; padding-top: 12px">
+                <div class="col-sm-5 sm-margin-bottom-20">
+                    <img class="img-responsive" src="images/cultural.jpg" alt="">
+                </div>
+                <div class="col-sm-7">
+                    <div class="news-v3">
+                        <h2>
+                            CULTURAL WING
+                        </h2>
+                        <p>Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten,
+                            then they are still using her.Far far away, It is a paradisematic country, in which roasted parts
+                            of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind
+                            texts it is an almost unorthographic life One day however a smbehind the word mountains, far
+                            from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in
+                            Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
+                            DudenNullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus,
+                            imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin
+                            sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus
+                            efficitur...
+                        </p>
+                        <br>
+                        <a class="btn btn-outline-primary text-light" style="float:right;position:relative" href="cultural.html">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <!--/end row-->
+            <!-- End News v3 -->
+
+            <div id="soc" class="clearfix margin-bottom-20">
+                <hr style="border-color:#ffffff">
+            </div>
+
+            <!-- News v3 -->
+            <div class="row margin-bottom-20" style="background-color: #ffffff; padding-bottom: 12px; padding-top: 12px">
+                <div class="col-sm-5 sm-margin-bottom-20">
+                    <img class="img-responsive" src="images/social.jpg" alt="">
+                </div>
+                <div class="col-sm-7">
+                    <div class="news-v3">
+                        <h2>
+                            SOCIAL WING
+                        </h2>
+                        <p>Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten,
+                            then they are still using her.Far far away, It is a paradisematic country, in which roasted parts
+                            of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind
+                            texts it is an almost unorthographic life One day however a smbehind the word mountains, far
+                            from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in
+                            Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
+                            DudenNullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus,
+                            imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin
+                            sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus
+                            efficitur...
+                        </p>
+                        <br>
+                        <a class="btn btn-outline-primary text-light" style="float:right;position:relative" href="social.html">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <!--/end row-->
+            <!-- End News v3 -->
+
+            <div id="sport" class="clearfix margin-bottom-20" >
+                <hr style="border-color:#ffffff">
+            </div>
+
+            <!-- News v3 -->
+            <div class="row margin-bottom-20" style="background-color: #ffffff; padding-bottom: 12px; padding-top: 12px">
+                    <div class="col-sm-5 sm-margin-bottom-20">
+                        <img class="img-responsive" src="images/sport.jpg" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="news-v3">
+                            <h2>
+                                SPORTS WING
+                            </h2>
+                            <p>Far far away, behind the word mountains, far from that again and again. And if she hasn’t been rewritten,
+                                then they are still using her.Far far away, It is a paradisematic country, in which roasted parts
+                                of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind
+                                texts it is an almost unorthographic life One day however a smbehind the word mountains, far
+                                from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in
+                                Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named
+                                DudenNullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus,
+                                imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin
+                                sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus
+                                efficitur...
+                            </p>
+                            <br>
+                            <a class="btn btn-outline-primary text-light" style="float:right;position:relative" href="sports.html">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <!--/end row-->
+                <!-- End News v3 -->
+    
+                <div class="clearfix margin-bottom-20">
+                    <hr style="border-color:#ffffff">
+                </div>
+
+
         </div>
-    </footer>
-    
-    
-    
-    
-    <!-- Optional JavaScript -->
+        <!--/end container-->
+        <!--=== End Blog Posts ===-->
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/viewportchecker.js"></script>
-    <script>
-        $('body').scrollspy({
-            target:'#myNav'
-        })
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1">
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- About -->
+                        <div class="col-md-3 md-margin-bottom-40">
+                            <a href="index-2.html">
+                                <img id="logo-footer" class="footer-logo" src="images/logo.png" alt="">
+                            </a>
+                            <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt
+                                sodales.
+                            </p>
+                            <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat
+                                non arcu.</p>
+                        </div>
+                        <!--/col-md-3-->
+                        <!-- End About -->
 
-        $('#myNav ul li a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            var t = this.hash;
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 500, function () {
-                window.location.hash = t;
-            });
-        })
+                        <!-- Latest -->
+                        <div class="col-md-3 md-margin-bottom-40">
+                            <div class="posts">
+                                <div class="headline">
+                                    <h2>Latest Posts</h2>
+                                </div>
+                                <ul class="list-unstyled latest-list">
+                                    <li>
+                                        <a href="#">Incredible content</a>
+                                        <small>May 8, 2014</small>
+                                    </li>
+                                    <li>
+                                        <a href="#">Best shoots</a>
+                                        <small>June 23, 2014</small>
+                                    </li>
+                                    <li>
+                                        <a href="#">New Terms and Conditions</a>
+                                        <small>September 15, 2014</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/col-md-3-->
+                        <!-- End Latest -->
 
-        jQuery(document).ready(function() {
-	        jQuery('.content').addClass("hidden").viewportChecker({
-	            classToAdd: 'visible animated fadeIn', // Class to add to the elements when they are visible
-	            offset: 100    
-	        });   
+                        <!-- Link List -->
+                        <div class="col-md-3 md-margin-bottom-40">
+                            <div class="headline">
+                                <h2>Useful Links</h2>
+                            </div>
+                            <ul class="list-unstyled link-list">
+                                <li>
+                                    <a href="#">About us</a>
+                                    <i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <a href="#">Portfolio</a>
+                                    <i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <a href="#">Latest jobs</a>
+                                    <i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <a href="#">Community</a>
+                                    <i class="fa fa-angle-right"></i>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                    <i class="fa fa-angle-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/col-md-3-->
+                        <!-- End Link List -->
+
+                        <!-- Address -->
+                        <div class="col-md-3 map-img md-margin-bottom-40">
+                            <div class="headline">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <address class="md-margin-bottom-40">
+                                Genesis,ISE Departmrnt,
+                                <br /> Dayananda Sagar College of Engineering
+                                <br /> Phone: 800 123 3456
+                                <br /> Email:
+                                <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+                            </address>
+                        </div>
+                        <!--/col-md-3-->
+                        <!-- End Address -->
+                    </div>
+                </div>
+            </div>
+            <!--/footer-->
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                2018 &copy; All Rights Reserved.
+                                <a href="#">Privacy Policy</a> |
+                                <a href="#">Terms of Service</a> | Powered by
+                                <a href="http://www.rabinsxp.com/">Rabins XP</a>
+
+                            </p>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="col-md-6">
+                            <ul class="footer-socials list-inline">
+                                <li>
+                                    <a href="https://www.facebook.com/genesisisedsce/" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                        <i class="fa fa-skype"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social Links -->
+                    </div>
+                </div>
+            </div>
+            <!--/copyright-->
+        </div>
+        <!--=== End Footer Version 1 ===-->
+    </div>
+    <!--/wrapper-->
+
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            StyleSwitcher.initStyleSwitcher();
         });
     </script>
-  </body>
+    <!--[if lt IE 9]>
+    <script src="assets/plugins/respond.js"></script>
+    <script src="assets/plugins/html5shiv.js"></script>
+    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
+</body>
+
+<!-- Cloned by RabinsXP.com-->
+
 </html>
