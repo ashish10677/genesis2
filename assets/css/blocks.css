@@ -329,6 +329,7 @@
   margin-bottom: 0;
   line-height: 55px;
   text-transform: uppercase;
+  padding-top: 50px;
 }
 
 @media (max-width: 768px) {
