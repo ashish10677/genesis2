@@ -3,14 +3,14 @@
 
 <head>
 
-  <title>genesis</title>
+  <title>Genesis</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Bungee' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Bungee|PT+Sans+Caption" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
@@ -33,6 +33,8 @@
       color: #818181;
       width: 100%;
       height: 100%;
+      margin: 0 auto;
+      padding: 0;
     }
 
     h2 {
@@ -52,7 +54,9 @@
     }
 
     .container-fluid {
-      padding: 60px 50px;
+      padding: 0px;
+      overflow-x: hidden;
+      margin: 0;
     }
 
     .bg-grey {
@@ -73,25 +77,31 @@
 
     .navbar {
       margin-bottom: 0;
-      background-color: #1a1a1a;
+      background-color: #FFFFFF;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
       line-height: 1.42857143 !important;
       letter-spacing: 4px;
       border-radius: 0;
-      font-family: Montserrat, sans-serif;
+      font-family: 'PT Sans Caption', sans-serif;
+
+
     }
 
     .navbar li a,
     .navbar .navbar-brand {
-      color: #fff !important;
+      color: #687074 !important;
+      font-size: 15px;
     }
 
     .navbar-nav li a:hover,
     .navbar-nav li.active a {
-      color: #1a1a1a !important;
-      background-color: #fff !important;
+      color: #72c02c !important;
+      border-bottom: solid 2px #72c02c;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(114, 192, 44);
     }
 
     .navbar-default .navbar-toggle {
@@ -99,11 +109,6 @@
       color: #fff !important;
     }
 
-    footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #1a1a1a;
-    }
 
     .slideanim {
       visibility: hidden;
@@ -139,12 +144,6 @@
       }
     }
 
-
-
-    .glyphicon-chevron-left {
-      color: #000000;
-      float: right;
-    }
 
     .current {
       position: relative;
@@ -191,11 +190,13 @@
       margin-left: 450px;
       margin-right: 450px;
     }
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 
     .row {
-      height: 450px
+      height: 100px
     }
+
     /* Set gray background color and 100% height */
 
     .sidenav {
@@ -207,7 +208,8 @@
     }
 
     .row.content {
-      height: 700px
+      height: 700px;
+
     }
 
     @media screen and (max-width: 767px) {
@@ -216,11 +218,30 @@
       }
     }
 
+    @media screen and (max-width: 480px) {
+      #topic {
+
+        font-size: 35px;
+        text-align: center;
+
+      }
+    }
+
+    @media screen and (max-width: 240px) {
+      #topic {
+
+        font-size: 25px;
+        text-align: center;
+
+      }
+    }
+
+
     .sidenav p {
       word-wrap: break-word;
     }
 
-    .bg-1 {
+    #tech {
       background-image: url('images/tech.jpg');
       background-repeat: no-repeat;
       background-position: center;
@@ -237,6 +258,16 @@
       bottom: 0;
       left: 0;
       z-index: 0;
+    }
+
+    #tech::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: " ";
+      position: absolute;
+      background: rgba(165, 152, 152, 0.20);
     }
 
     .bg-1 h1 {
@@ -266,9 +297,48 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      z-index: 1;
     }
+
     #sideNavBar {
       list-style-type: none;
+      margin: 0%;
+      padding: 0%;
+      width: 100%;
+    }
+
+    #topic {
+      font-family: 'Bungee', cursive;
+      color: #ffffff;
+      text-shadow: 2px 2px 2px #000000;
+      position: relative;
+      top: 40%;
+      z-index: 1;
+    }
+
+    .sidebarli {
+      padding: 0%;
+    }
+
+    .nav-link {
+      display: block;
+      color: #687074;
+      padding: 8px 16px;
+      text-decoration: none;
+
+    }
+
+    .nav-link:hover {
+      background-color: #e7e7e7;
+      color: #72c02c;
+      border-bottom: solid 2px #72c02c;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(114, 192, 44);
+    }
+
+    .eventname {
+      padding-top: 20px
     }
   </style>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -296,27 +366,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <img src="images/logo.png" height="50px" width="50px" align="left">
+        <a href="index.html">
+          <img src="images/logo.png" height="50px" width="50px" align="left">
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="cultural.html">cultural wing</a>
+            <a href="cultural.html">Cultural wing</a>
           </li>
           <li>
-            <a href="social.html">social wing</a>
+            <a href="social.html">Social wing</a>
           </li>
           <li>
-            <a href="sports.html">sports wing</a>
+            <a href="sports.html">Sports wing</a>
           </li>
           <li>
-            <a href="#events">events</a>
+            <a href="#events">Events</a>
           </li>
           <li>
-            <a href="#members">members</a>
-          </li>
-          <li>
-            <a href="#contact">contact</a>
+            <a href="#members">Members</a>
           </li>
         </ul>
       </div>
@@ -325,7 +394,7 @@
 
 
 
-  <div class="container-fluid bg-1 text-center">
+  <div id="tech" class="container-fluid bg-1 text-center">
     <div id="techtext">
       <script type="text/javascript">
         particlesJS("techtext", {
@@ -441,7 +510,7 @@
       </script>
     </div>
 
-    <h1 style="font-size: 100px;">Technical wing</h1>
+    <div id="topic" class="display-2">Technical wing</div>
   </div>
 
   <!-- Container (events Section) -->
@@ -455,7 +524,7 @@
       </div>
 
 
-      <div class="col-sm-10" style="float: right">
+      <div class="col-sm-10" style="float: right; padding-top:12px;">
         <div class="card" id="content1"></div>
       </div>
 
@@ -477,7 +546,7 @@
   <br>
   <br>
 
-  <div id="members" class="container-fluid ">
+  <div id="members" class="container-fluid" style="padding: 60px 50px">
     <h1>Members</h1>
 
     <div class="card-deck-wrapper">
@@ -486,7 +555,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -498,7 +567,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -510,7 +579,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -520,7 +589,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -538,7 +607,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -548,7 +617,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -557,7 +626,7 @@
         </div>
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -566,7 +635,7 @@
         </div>
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -576,45 +645,26 @@
       </div>
     </div>
   </div>
-
-  <footer class="container-fluid text-center">
-    <div id="contact" class="container">
-      <h2 class="text-center">CONTACT</h2>
+  <footer class="bg-dark text-light">
+    <div class="container">
       <div class="row">
-        <div class="col-sm-5">
-          <p>Contact us and we'll get back to you within 24 hours.</p>
-          <p>
-            <span class="glyphicon glyphicon-map-marker"></span>DSI(ISE DEPT)</p>
-          <p>
-            <span class="glyphicon glyphicon-phone"></span> +91 9685744446</p>
-          <p>
-            <span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        <div class="col-md-4 text-md-center">
+          <h3>Need more info?</h3>
+          <div id="foot">Get in touch: 8197273832</div>
         </div>
-      </div>
-
-    </div>
-    <div class="col-sm-7 ">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        <div class="col-md-4 text-md-center">
+          <h3>Join Now</h3>
+          <div class="btn" style="background-color:#72c02c  ">Go Here</div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          <br>
-          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-          <br>
-          <div class="row">
-            <div class="col-sm-12 form-group">
-              <button class="btn btn-default pull-right" type="submit">Send</button>
-            </div>
-          </div>
+        <div class="col-md-4 text-md-center">
+          <h3>Copyright</h3>
+          <div id="foot">&copy; 2017</div>
         </div>
       </div>
     </div>
-    <a href="#myPage" title="To Top">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
   </footer>
+
+
   <script>
     function showData() {
       var i = 1;
@@ -624,6 +674,7 @@
           var eventDate = document.createElement('h3');
           var eventDesc = document.createElement('p');
           var childData = childSnapshot.val();
+          eventName.setAttribute('class', 'eventname');
           eventDate.innerHTML = childData.date;
           eventName.innerHTML = childData.name;
           eventDesc.innerHTML = childData.desc;
@@ -645,8 +696,9 @@
         snapshot.forEach(function (childSnapshot) {
           var eventName = document.createElement('li');
           var eventLink = document.createElement('a');
-          eventLink.setAttribute('href','#');
-          eventLink.setAttribute('class','nav-link');
+          eventLink.setAttribute('href', '#');
+          eventLink.setAttribute('class', 'nav-link');
+          eventName.setAttribute('class', 'sidebarli');
           var childData = childSnapshot.val();
           eventLink.innerHTML = childData.name;
 
@@ -655,45 +707,23 @@
           unOrderedList.appendChild(eventName);
 
         });
-      });  
+      });
     }
     window.onload = showData();
   </script>
   <script>
-    $(document).ready(function () {
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
 
-          // Store hash
-          var hash = this.hash;
+    $(window).scroll(function () {
+      $(".slideanim").each(function () {
+        var pos = $(this).offset().top;
 
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function () {
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
+        var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
       });
+    });
 
-      $(window).scroll(function () {
-        $(".slideanim").each(function () {
-          var pos = $(this).offset().top;
-
-          var winTop = $(window).scrollTop();
-          if (pos < winTop + 600) {
-            $(this).addClass("slide");
-          }
-        });
-      });
-    })
   </script>
 
 </body>
