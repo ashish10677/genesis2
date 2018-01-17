@@ -33,8 +33,8 @@
       color: #818181;
       width: 100%;
       height: 100%;
-      margin:0 auto;
-     padding:0;
+      margin: 0 auto;
+      padding: 0;
     }
 
     h2 {
@@ -55,8 +55,8 @@
 
     .container-fluid {
       padding: 0px;
-      overflow-x:hidden;
-       margin:0;
+      overflow-x: hidden;
+      margin: 0;
     }
 
     .bg-grey {
@@ -260,6 +260,16 @@
       z-index: 0;
     }
 
+    #tech::after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: " ";
+      position: absolute;
+      background: rgba(165, 152, 152, 0.20);
+    }
+
     .bg-1 h1 {
       font-family: Bungee, cursive;
       color: #ffffff;
@@ -287,6 +297,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      z-index: 1;
     }
 
     #sideNavBar {
@@ -302,6 +313,7 @@
       text-shadow: 2px 2px 2px #000000;
       position: relative;
       top: 40%;
+      z-index: 1;
     }
 
     .sidebarli {
@@ -322,10 +334,12 @@
       border-bottom: solid 2px #72c02c;
       border-bottom-width: 2px;
       border-bottom-style: solid;
-      border-bottom-color: rgb(114, 192, 44);    }
-      .eventname {
-        padding-top: 20px
-      }
+      border-bottom-color: rgb(114, 192, 44);
+    }
+
+    .eventname {
+      padding-top: 20px
+    }
   </style>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
@@ -353,8 +367,8 @@
           <span class="icon-bar"></span>
         </button>
         <a href="index.html">
-        <img src="images/logo.png" height="50px" width="50px" align="left">
-      </a>
+          <img src="images/logo.png" height="50px" width="50px" align="left">
+        </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
@@ -541,7 +555,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -553,7 +567,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -565,7 +579,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -575,7 +589,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -593,7 +607,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -603,7 +617,7 @@
 
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -612,7 +626,7 @@
         </div>
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
@@ -621,7 +635,7 @@
         </div>
         <div class="card">
           <div class="card-block">
-            <img class="card-img-top" src="images.png" alt="Card image" style="width:50%">
+            <img class="card-img-top" src="images/images.png" alt="Card image" style="width:50%">
             <div class="card-body">
               <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
