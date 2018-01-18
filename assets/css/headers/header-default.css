@@ -1094,3 +1094,51 @@ body.header-fixed-space-default {
 	left: inherit;
 	width: inherit;
 }
+
+
+.navbar {
+	margin-bottom: 0;
+	background-color: #FFFFFF;
+	z-index: 9999;
+	border: 0;
+	font-size: 12px !important;
+	line-height: 1.42857143 !important;
+	letter-spacing: 4px;
+	border-radius: 0;
+	font-family: 'PT Sans Caption', sans-serif;
+	padding: .5rem 1rem;
+
+  }
+
+  .navbar li a,
+  .navbar .navbar-brand {
+	color: #687074 !important;
+	font-size: 15px;
+  }
+
+  .navbar-nav li a:hover,
+  .navbar-nav li.active a {
+	color: #72c02c !important;
+	border-bottom: solid 2px #72c02c;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(114, 192, 44);
+  }
+
+  .navbar-default .navbar-toggle {
+	border-color: transparent;
+	color: #fff !important;
+  }
+  .nav-link {
+	display: block;
+	color: #687074;
+	padding: 8px 16px;
+	text-decoration: none;
+
+  }
+
+  .nav-link:hover {
+	background-color: #e7e7e7;
+	color: #72c02c;
+	border-bottom: solid 2px #72c02c;
+  }
