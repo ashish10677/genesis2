@@ -480,15 +480,87 @@
 
 
       <div class="col-sm-10" style="float: right; padding-top:12px;">
-        <div class="card" id="content1"></div>
+        <div class="card" id="content1">
+          <div class="col-sm-3 sm-margin-bottom-20">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-sm-10" style="float: right">
-        <div class="card" id="content2"></div>
+        <div class="card" id="content2">
+          <div class="col-sm-3 sm-margin-bottom-20">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-sm-10" style="float: right">
-        <div class="card" id="content3"></div>
+        <div class="card" id="content3">
+          <div class="col-sm-3 sm-margin-bottom-20">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -755,10 +827,38 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h3 class="modal-title" id="event"></h3>
         </div>
         <div class="modal-body">
-          <p>This is a large modal.</p>
+          <h4 id="date"></h4>
+          <div class="col-sm-5 sm-margin-bottom-20">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="3" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/sport.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="desc"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -766,55 +866,7 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function showData() {
-      var i = 1;
-      firebase.database().ref().child('events/cult').limitToLast(3).once('value', function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-          var eventName = document.createElement('h1');
-          var eventDate = document.createElement('h3');
-          var eventDesc = document.createElement('p');
-          var childData = childSnapshot.val();
-          eventName.setAttribute('class', 'eventname');
-          eventDate.innerHTML = childData.date;
-          eventName.innerHTML = childData.name;
-          eventDesc.innerHTML = childData.desc;
-
-          var contentElement = document.getElementById('content' + i);
-          contentElement.appendChild(eventName);
-          contentElement.appendChild(eventDate);
-          contentElement.appendChild(eventDesc);
-          i++;
-
-        });
-      });
-      showNavBar();
-    }
-
-    function showNavBar() {
-      var i = 1;
-      firebase.database().ref().child('events/cult').once('value', function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-          var eventName = document.createElement('li');
-          var eventLink = document.createElement('a');
-          eventLink.setAttribute('href', "");
-          eventLink.setAttribute('class', 'nav-link');
-          eventName.setAttribute('class', 'sidebarli');
-          eventLink.setAttribute('data-toggle', 'modal');
-          eventLink.setAttribute('data-target', '#eventModal');
-          var childData = childSnapshot.val();
-          eventLink.innerHTML = childData.name;
-
-          var unOrderedList = document.getElementById('sideNavBar');
-          eventName.appendChild(eventLink);
-          unOrderedList.appendChild(eventName);
-
-        });
-      });
-    }
-    window.onload = showData();
-  </script>
+  <script src="js/cultural.js"></script>
   <script>
 
     $(window).scroll(function () {
