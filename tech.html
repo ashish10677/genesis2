@@ -15,17 +15,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/particles.js"></script>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
     crossorigin="anonymous">
-  
+
   <!-- Web Fonts -->
   <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
@@ -355,6 +352,18 @@
     .eventname {
       padding-top: 20px
     }
+
+    .modal-header,
+    .close {
+      background-color: #5cb85c;
+      color: white !important;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .modal-footer {
+      background-color: #f9f9f9;
+    }
   </style>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
@@ -382,7 +391,7 @@
           <span class="icon-bar"></span>
         </button>
         <a href="index.html">
-          <img src="images/logo.png" height="50px" width="50px" align="left">
+          <img src="images/tech1.jpg" height="50px" width="50px" align="left">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -397,13 +406,16 @@
             <a href="sports.html">Sports wing</a>
           </li>
           <li>
+            <a href="alumnis.html">Alumnis</a>
+          </li>
+          <li>
             <a href="#events">Events</a>
           </li>
           <li>
             <a href="#members">Members</a>
           </li>
           <li>
-            <a href="alumnis.html">Alumnis</a>
+            <a href="" data-toggle="modal" data-target="#myModal">Login</a>
           </li>
         </ul>
       </div>
@@ -411,120 +423,56 @@
   </nav>
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog" style="padding-top:8%">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="      background-color: #5cb85c;
+          color: white !important;
+          text-align: center;
+          font-size: 30px;">
+            <span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname">
+                <span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw">
+                <span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="" checked>Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">
+              <span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Forgot
+            <a href="#">Password?</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <div id="tech" class="container-fluid bg-1 text-center">
     <div id="techtext">
       <script type="text/javascript">
-        particlesJS("techtext", {
-          "particles": {
-            "number": {
-              "value": 80,
-              "density": {
-                "enable": true,
-                "value_area": 800
-              }
-            },
-            "color": {
-              "value": "#ffffff"
-            },
-            "shape": {
-              "type": "circle",
-              "stroke": {
-                "width": 0,
-                "color": "#000000"
-              },
-              "polygon": {
-                "nb_sides": 5
-              },
-              "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-              }
-            },
-            "opacity": {
-              "value": 0.5,
-              "random": false,
-              "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 3,
-              "random": true,
-              "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": true,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 6,
-              "direction": "none",
-              "random": false,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-              }
-            }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "repulse"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              },
-              "resize": true
-            },
-            "modes": {
-              "grab": {
-                "distance": 400,
-                "line_linked": {
-                  "opacity": 1
-                }
-              },
-              "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-              },
-              "repulse": {
-                "distance": 200,
-                "duration": 0.4
-              },
-              "push": {
-                "particles_nb": 4
-              },
-              "remove": {
-                "particles_nb": 2
-              }
-            }
-          },
-          "retina_detect": true
-        });
+
+        particlesJS("techtext", { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 6, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+
       </script>
     </div>
 
@@ -557,13 +505,7 @@
 
     </div>
   </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
+  
   <div id="members" class="container-fluid" style="padding: 60px 50px">
     <h1>Members</h1>
 
@@ -670,7 +612,7 @@
           <!-- About -->
           <div class="col-md-3 md-margin-bottom-40">
             <a href="index-2.html">
-              <img id="logo-footer" class="footer-logo" src="images/logo.png" alt="">
+              <img id="logo-footer" class="footer-logo" src="images/tech1.jpg" width="100" height="100" alt="">
             </a>
             <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.
             </p>
@@ -815,6 +757,24 @@
     <!--/copyright-->
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="eventModal" role="dialog" style="padding-top:8%">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     function showData() {
       var i = 1;
@@ -846,9 +806,11 @@
         snapshot.forEach(function (childSnapshot) {
           var eventName = document.createElement('li');
           var eventLink = document.createElement('a');
-          eventLink.setAttribute('href', '#');
+          eventLink.setAttribute('href', "");
           eventLink.setAttribute('class', 'nav-link');
           eventName.setAttribute('class', 'sidebarli');
+          eventLink.setAttribute('data-toggle', 'modal');
+          eventLink.setAttribute('data-target', '#eventModal');
           var childData = childSnapshot.val();
           eventLink.innerHTML = childData.name;
 
