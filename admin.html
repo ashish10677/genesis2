@@ -383,7 +383,7 @@
             <a href="alumnis.html">Alumnis</a>
           </li>
           <li>
-            <a onclick="logout()">Log Out</a>
+            <a href="" onclick="logout()">Log Out</a>
           </li>
         </ul>
       </div>
@@ -499,8 +499,8 @@
             height="30%" width="30%" id="modal-image">
           <p id="modalDesc"></p>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger">Delete</button>
+        <div class="modal-footer" id="last">
+          <button class="btn btn-danger glyphicon glyphicon-trash" id="btnDelete" data-dismiss="modal"></button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
