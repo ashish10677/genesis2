@@ -23,7 +23,6 @@
     }
 
     function showNavBar() {
-      var i = 1;
       firebase.database().ref().child('events/tech').once('value', function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
 
@@ -52,6 +51,6 @@
         document.getElementById('event').innerHTML = snapshot.val().name;
         document.getElementById('date').innerHTML = snapshot.val().date;
         document.getElementById('desc').innerHTML = snapshot.val().desc;
-      })
+      });
     }
     window.onload = showData();

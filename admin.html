@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Genesis</title>
+  <title>Admin</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
@@ -16,8 +16,6 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/particles.js"></script>
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
@@ -47,6 +45,11 @@
   />
 
   <style>
+    #modal-image {
+      float: left;
+      padding-right: 23px;
+    }
+
     html,
     body {
       font: 400 15px Lato, sans-serif;
@@ -291,7 +294,7 @@
       word-wrap: break-word;
     }
 
-    
+
     #sideNavBar {
       list-style-type: none;
       margin: 0%;
@@ -328,6 +331,7 @@
       border-bottom-style: solid;
       border-bottom-color: rgb(114, 192, 44);
     }
+
     .rightbar {
       margin-left: 250px;
     }
@@ -345,18 +349,6 @@
     }
   </style>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
-      authDomain: "ashish10677-ce652.firebaseapp.com",
-      databaseURL: "https://ashish10677-ce652.firebaseio.com",
-      projectId: "ashish10677-ce652",
-      storageBucket: "ashish10677-ce652.appspot.com",
-      messagingSenderId: "1059927379248"
-    };
-    firebase.initializeApp(config);
-  </script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -390,15 +382,13 @@
           <li>
             <a href="alumnis.html">Alumnis</a>
           </li>
+          <li>
+            <a onclick="logout()">Log Out</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
-
-
-
-
   <!-- Container (events Section) -->
   <div id="events" class="container-fluid bg-grey" style="padding-bottom:12%">
 
@@ -421,7 +411,7 @@
             <br>
 
 
-            <form action="/action_page.php">
+            <form>
               <label>Date</label>
               <br>
               <input type="date" name="register">
@@ -442,14 +432,7 @@
     </div>
   </div>
 
-
-
-
-
-
   <div class="footer-v1" style="font-size: 13px">
-
-
     <div class="copyright">
       <div class="container">
         <div class="row">
@@ -515,69 +498,93 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h3 class="modal-title" id="event"></h3>
         </div>
         <div class="modal-body">
-          <p>This is a large modal.</p>
+          <h4 id="date"></h4>
+          <img src="https://firebasestorage.googleapis.com/v0/b/ashish10677-ce652.appspot.com/o/23473009_1450015725097680_2407537004374411144_n.jpg?alt=media&token=b7e9ee78-1896-45db-bdde-70157fcc67e9"
+            height="30%" width="30%" id="modal-image">
+          <p id="desc"></p>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-danger">Delete</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-
   <script>
-    function showData() {
-      var i = 1;
-      firebase.database().ref().child('events/tech').limitToLast(3).once('value', function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-          var eventName = document.createElement('h1');
-          var eventDate = document.createElement('h3');
-          var eventDesc = document.createElement('p');
-          var childData = childSnapshot.val();
-          eventName.setAttribute('class', 'eventname');
-          eventDate.innerHTML = childData.date;
-          eventName.innerHTML = childData.name;
-          eventDesc.innerHTML = childData.desc;
-
-          var contentElement = document.getElementById('content' + i);
-          contentElement.appendChild(eventName);
-          contentElement.appendChild(eventDate);
-          contentElement.appendChild(eventDesc);
-          i++;
-
-        });
-      });
-      showNavBar();
-    }
-
-    function showNavBar() {
-      var i = 1;
-      firebase.database().ref().child('events/tech').once('value', function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-          var eventName = document.createElement('li');
-          var eventLink = document.createElement('a');
-          eventLink.setAttribute('href', '#');
-          eventLink.setAttribute('class', 'nav-link');
-          eventName.setAttribute('class', 'sidebarli');
-          eventLink.setAttribute('data-toggle', 'modal');
-          eventLink.setAttribute('data-target', '#eventModal');
-          var childData = childSnapshot.val();
-          eventLink.innerHTML = childData.name;
-
-          var unOrderedList = document.getElementById('sideNavBar');
-          eventName.appendChild(eventLink);
-          unOrderedList.appendChild(eventName);
-
-        });
-      });
-    }
-    window.onload = showData();
-
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
+      authDomain: "ashish10677-ce652.firebaseapp.com",
+      databaseURL: "https://ashish10677-ce652.firebaseio.com",
+      projectId: "ashish10677-ce652",
+      storageBucket: "ashish10677-ce652.appspot.com",
+      messagingSenderId: "1059927379248"
+    };
+    firebase.initializeApp(config);
   </script>
   <script>
+    function showNavBar() {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          console.log(displayName);
+          console.log(email);
+          console.log(emailVerified);
+          console.log(photoURL);
+          console.log(uid);
+          firebase.database().ref().child('events/tech').once('value', function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
 
+              var eventName = document.createElement('li');
+              var eventLink = document.createElement('a');
+              var childData = childSnapshot.val();
+              var childKey = childSnapshot.key;
+              var unOrderedList = document.getElementById('sideNavBar');
+              eventName.setAttribute('class', 'sidebarli');
+              eventLink.setAttribute('href', "");
+              eventLink.setAttribute('class', 'nav-link');
+              eventLink.setAttribute('onclick', 'data(' + childKey + ')');
+              eventLink.setAttribute('data-toggle', 'modal');
+              eventLink.setAttribute('data-target', '#eventModal');
+              eventLink.innerHTML = childData.name;
+              eventName.appendChild(eventLink);
+              unOrderedList.appendChild(eventName);
+
+            });
+          });
+        } else {
+          console.log('Not Signed In');
+          window.location = 'index.html';
+        }
+      });
+    }
+
+    function data(dataKey) {
+      console.log(dataKey);
+      firebase.database().ref('/events/tech/' + dataKey).once('value').then(function (snapshot) {
+        document.getElementById('event').innerHTML = snapshot.val().name;
+        document.getElementById('date').innerHTML = snapshot.val().date;
+        document.getElementById('desc').innerHTML = snapshot.val().desc;
+      });
+    }
+
+    function logout() {
+      firebase.auth().signOut();
+      window.location = 'index.html';
+    }
+    window.onload = showNavBar();
+  </script>
+  <script>
     $(window).scroll(function () {
       $(".slideanim").each(function () {
         var pos = $(this).offset().top;
@@ -588,7 +595,6 @@
         }
       });
     });
-
   </script>
 
 </body>
