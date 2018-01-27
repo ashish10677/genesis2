@@ -19,11 +19,11 @@
                 var uid = user.uid;
                 if (email == "ashish10677@gmail.com") {
                     displayName = "Ashish";
-                    alert("Welcome, " + displayName);
+                    document.getElementById('managerName').innerHTML = "Welcome, " + displayName;
                     wing = "tech";
                 } else if (email == "harshkhetrapal@gmail.com") {
                     displayName = "Harsh";
-                    alert("Welcome, " + displayName);
+                    document.getElementById('managerName').innerHTML = "Welcome, " + displayName;
                     wing = "sports";
                 }
                 firebase.database().ref().child('events/' + wing).once('value', function (snapshot) {
@@ -92,14 +92,15 @@
             name: nm
         });
         alert("Event added successfully");
+        location.reload(); 
         document.getElementById('name').value = null;
         document.getElementById('date').value = null;
         document.getElementById('desc').value = null;
     }
 
     function deleteData(key) {
-        console.log('Delete record ' + key);
         var database = firebase.database();
         database.ref('events/'+wing+'/').child(key).remove();
+        location.reload();
     }
     window.onload = showNavBar();
