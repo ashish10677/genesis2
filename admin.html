@@ -495,8 +495,33 @@
         </div>
         <div class="modal-body">
           <h4 id="modalDate"></h4>
-          <img src="https://firebasestorage.googleapis.com/v0/b/ashish10677-ce652.appspot.com/o/23473009_1450015725097680_2407537004374411144_n.jpg?alt=media&token=b7e9ee78-1896-45db-bdde-70157fcc67e9"
-            height="30%" width="30%" id="modal-image">
+          <div class="col-sm-5 sm-margin-bottom-20">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="3" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/sport.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
           <p id="modalDesc"></p>
         </div>
         <div class="modal-footer" id="last">
@@ -507,7 +532,7 @@
     </div>
   </div>
   <script src="js/admin.js"></script>
-<script>
+  <script>
     $(window).scroll(function () {
       $(".slideanim").each(function () {
         var pos = $(this).offset().top;
