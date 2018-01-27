@@ -36,340 +36,7 @@
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
   <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-  <style>
-    #modal-image {
-      float: left;
-      padding-right: 23px;
-    }
-
-    html,
-    body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-
-    h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
-
-    .container-fluid {
-      padding: 0px;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    .bg-grey {
-      background-color: #f6f6f6;
-    }
-
-    .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-    }
-
-    .item span {
-      font-style: normal;
-    }
-
-    .navbar {
-      margin-bottom: 0;
-      background-color: #FFFFFF;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: 'PT Sans Caption', sans-serif;
-
-
-    }
-
-    .navbar li a,
-    .navbar .navbar-brand {
-      color: #687074 !important;
-      font-size: 15px;
-    }
-
-    .navbar-nav li a:hover,
-    .navbar-nav li.active a {
-      color: #72c02c !important;
-      border-bottom: solid 2px #72c02c;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
-      border-bottom-color: rgb(114, 192, 44);
-    }
-
-    .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-    }
-
-
-    .slideanim {
-      visibility: hidden;
-    }
-
-    .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-    }
-
-    @keyframes slide {
-      0% {
-        opacity: 0;
-        transform: translateY(70%);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0%);
-      }
-    }
-
-    @-webkit-keyframes slide {
-      0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-      }
-      100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-      }
-    }
-
-
-    .current {
-      position: relative;
-      font-family: Arial;
-    }
-
-    .text-block {
-      position: absolute;
-      bottom: 20px;
-      right: 200px;
-      width: 1000px;
-      background: rgba(0, 0, 0, 0.5);
-      color: #ffffff;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-
-    .header {
-      font-family: calibri;
-      font-size: 12pt;
-      text-align: center;
-      padding-top: 20px;
-    }
-
-    select.drop {
-      text-align: center;
-      font-size: 16pt;
-      width: 250px;
-      height: 30px;
-      color: #808080;
-    }
-
-    .signupbtn {
-      padding: 14px 20px;
-      background-color: #800000;
-      margin-left: 80px;
-      margin-top: 15px;
-      color: #FFFFFF;
-    }
-
-    .form-edit {
-
-      margin-left: 450px;
-      margin-right: 450px;
-    }
-
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-    /*  .row {
-      height: 100px
-    }*/
-
-    /* Set gray background color and 100% height */
-
-    .sidenav {
-      padding-top: 20px;
-      background-color: #fff;
-      height: 100%;
-      margin-top: 30px;
-      border-radius: 5px;
-    }
-
-    .row.content {
-      height: 700px;
-
-    }
-
-    @media screen and (max-width: 767px) {
-      .row.content {
-        height: auto;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      #topic {
-
-        font-size: 35px;
-        text-align: center;
-
-      }
-    }
-
-    @media screen and (max-width: 240px) {
-      #topic {
-
-        font-size: 25px;
-        text-align: center;
-
-      }
-    }
-
-
-    .sidenav p {
-      word-wrap: break-word;
-    }
-
-    #tech {
-      background-image: url('images/tech.jpg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      height: 100%;
-      width: 100%;
-      text-shadow: 2px 2px 2px #000000;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    #tech::after {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: " ";
-      position: absolute;
-      background: rgba(165, 152, 152, 0.20);
-    }
-
-    .bg-1 h1 {
-      font-family: Bungee, cursive;
-      color: #ffffff;
-      position: relative;
-      word-wrap: break-word;
-      top: 48%;
-    }
-
-    .card {
-      margin: 15px;
-      padding: 30px;
-    }
-
-    #members .container p,
-    h4 {
-      word-wrap: break-word;
-    }
-
-    #events .container a {
-      word-wrap: break-word;
-      display: inline;
-    }
-
-    #techtext {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    #sideNavBar {
-      list-style-type: none;
-      margin: 0%;
-      padding: 0%;
-      width: 100%;
-    }
-
-    #topic {
-      font-family: 'Bungee', cursive;
-      color: #ffffff;
-      text-shadow: 2px 2px 2px #000000;
-      position: relative;
-      top: 40%;
-      z-index: 1;
-    }
-
-    .sidebarli {
-      padding: 0%;
-    }
-
-    .nav-link {
-      display: block;
-      color: #687074;
-      padding: 8px 16px;
-      text-decoration: none;
-
-    }
-
-    .nav-link:hover {
-      background-color: #e7e7e7;
-      color: #72c02c;
-      border-bottom: solid 2px #72c02c;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
-      border-bottom-color: rgb(114, 192, 44);
-    }
-
-    .eventname {
-      padding-top: 20px
-    }
-
-    .modal-header,
-    .close {
-      background-color: #5cb85c;
-      color: white !important;
-      text-align: center;
-      font-size: 30px;
-    }
-
-    .modal-footer {
-      background-color: #f9f9f9;
-    }
-  </style>
+<link rel="stylesheet" href="css/tech.css">
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -382,6 +49,50 @@
       messagingSenderId: "1059927379248"
     };
     firebase.initializeApp(config);
+  </script>
+  <script>
+    function signIn() {
+      var email = document.getElementById('eid').value;
+      var password = document.getElementById('pwd').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START authwithemail]
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+        });
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            window.location = 'admin.html';
+          }
+          else {
+            console.log('Not Signed In');
+          }
+        });
+      }
   </script>
 </head>
 
@@ -420,58 +131,46 @@
             <a href="#members">Members</a>
           </li>
           <li>
-            <a href="" data-toggle="modal" data-target="#myModal">Login</a>
+            <a data-toggle="modal" data-target="#signIn">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog" style="padding-top:8%">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
+ <!-- The Modal -->
+ <div class="modal fade" id="signIn" style="padding-top:15%">
+  <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header" style="padding:35px 50px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 style="      background-color: #5cb85c;
-          color: white !important;
-          text-align: center;
-          font-size: 30px;">
-            <span class="glyphicon glyphicon-lock"></span> Login</h4>
-        </div>
-        <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
-            <div class="form-group">
-              <label for="usrname">
-                <span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="psw">
-                <span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="text" class="form-control" id="psw" placeholder="Enter password">
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="" checked>Remember me</label>
-            </div>
-            <button type="submit" class="btn btn-success btn-block">
-              <span class="glyphicon glyphicon-off"></span> Login</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <p>Forgot
-            <a href="#">Password?</a>
-          </p>
-        </div>
+
+          <!-- Modal Header -->
+          <div class="modal-header center">
+              <h3 class="modal-title ml-auto" style="color:#ffffff">Sign In</h3>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+              <div id="div-login-msg">
+                  <h5 class="text-center">Enter your username and password</h5>
+              </div>
+              <form>
+                  <div class="form-group">
+                      <input type="email" class="form-control" id="eid" placeholder="Email id">
+                  </div>
+                  <div class="form-group">
+                      <input type="password" class="form-control" id="pwd" placeholder="Password">
+                  </div>
+              </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+              <button class="btn btn-success btn-lg btn-block" id="btnLogin" onclick="signIn();">Login</button>
+          </div>
       </div>
-
-    </div>
   </div>
-
+</div>
+  
   <div id="tech" class="container-fluid bg-1 text-center">
     <div id="techtext">
       <script type="text/javascript">
@@ -604,7 +303,7 @@
 
       <div class="col-sm-10" style="float: right; padding-top:12px;">
         <div class="card" id="content1">
-          <div class="col-sm-3 sm-margin-bottom-20">
+          <div class="col-sm-3 sm-margin-bottom-20" style="float:right; margin-top:8%">
             <div class="carousel slide" data-ride="carousel" id="blog-carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
@@ -632,7 +331,7 @@
 
       <div class="col-sm-10" style="float: right">
         <div class="card" id="content2">
-          <div class="col-sm-3 sm-margin-bottom-20">
+          <div class="col-sm-3 sm-margin-bottom-20" style="float:right; margin-top:8%">
             <div class="carousel slide" data-ride="carousel" id="blog-carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
@@ -660,7 +359,7 @@
 
       <div class="col-sm-10" style="float: right">
         <div class="card" id="content3">
-          <div class="col-sm-3 sm-margin-bottom-20">
+          <div class="col-sm-3 sm-margin-bottom-20" style="float:right; margin-top:8%">
             <div class="carousel slide" data-ride="carousel" id="blog-carousel">
               <!-- Indicators -->
               <ol class="carousel-indicators">
