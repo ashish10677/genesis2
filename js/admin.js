@@ -8,19 +8,25 @@
         messagingSenderId: "1059927379248"
     };
     firebase.initializeApp(config);
-
+    var wing;
     function showNavBar() {
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 // User is signed in.
                 var displayName = user.displayName;
                 var email = user.email;
-                var emailVerified = user.emailVerified;
-                var photoURL = user.photoURL;
-                var isAnonymous = user.isAnonymous;
                 var uid = user.uid;
-                var providerData = user.providerData;
-                firebase.database().ref().child('events/tech').once('value', function (snapshot) {
+                if (email == "ashish10677@gmail.com") {
+                    displayName = "Ashish";
+                    alert("Welcome, "+ displayName);
+                    wing = "tech";
+                }
+                else if (email == "harshkhetrapal@gmail.com") {
+                    displayName = "Harsh";
+                    alert("Welcome, "+ displayName);
+                    wing = "sports";
+                }
+                firebase.database().ref().child('events/'+wing).once('value', function (snapshot) {
                     snapshot.forEach(function (childSnapshot) {
                         var eventName = document.createElement('li');
                         var eventLink = document.createElement('a');
@@ -48,7 +54,7 @@
 
     function data(dataKey) {
         console.log(dataKey);
-        firebase.database().ref('/events/tech/' + dataKey).once('value').then(function (snapshot) {
+        firebase.database().ref('/events/'+wing+'/' + dataKey).once('value').then(function (snapshot) {
             document.getElementById('modalEvent').innerHTML = snapshot.val().name;
             document.getElementById('modalDate').innerHTML = snapshot.val().date;
             console.log(document.getElementById('date'));
@@ -63,11 +69,11 @@
 
     function readIndex() {
         var database = firebase.database();
-        database.ref('events').child('tech').once('value', snap => {
+        database.ref('events').child(wing).once('value', snap => {
             if (snap.val() == null) {
                 writeUserData(1);
             } else {
-                database.ref('events/tech').limitToLast(1).once('value', function (snapshot) {
+                database.ref('events/'+wing).limitToLast(1).once('value', function (snapshot) {
                     snapshot.forEach(function (childSnapshot) {
                         var childKey = childSnapshot.key;
                         writeUserData(parseInt(childKey) + 1);
@@ -81,7 +87,7 @@
         nm = document.getElementById('name').value;
         dt = document.getElementById('date').value;
         desc = document.getElementById('desc').value;
-        firebase.database().ref('events/tech/' + key).set({
+        firebase.database().ref('events/'+wing+'/' + key).set({
             date: dt,
             desc: desc,
             name: nm
