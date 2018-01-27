@@ -15,13 +15,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/particles.js"></script>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
     crossorigin="anonymous">
@@ -39,316 +36,7 @@
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
   <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-  <style>
-    html,
-    body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-
-    h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
-
-    .container-fluid {
-      padding: 0px;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    .bg-grey {
-      background-color: #f6f6f6;
-    }
-
-    .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-    }
-
-    .item span {
-      font-style: normal;
-    }
-
-    .navbar {
-      margin-bottom: 0;
-      background-color: #FFFFFF;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: 'PT Sans Caption', sans-serif;
-
-
-    }
-
-    .navbar li a,
-    .navbar .navbar-brand {
-      color: #687074 !important;
-      font-size: 15px;
-    }
-
-    .navbar-nav li a:hover,
-    .navbar-nav li.active a {
-      color: #72c02c !important;
-      border-bottom: solid 2px #72c02c;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
-      border-bottom-color: rgb(114, 192, 44);
-    }
-
-    .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-    }
-
-
-    .slideanim {
-      visibility: hidden;
-    }
-
-    .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-    }
-
-    @keyframes slide {
-      0% {
-        opacity: 0;
-        transform: translateY(70%);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0%);
-      }
-    }
-
-    @-webkit-keyframes slide {
-      0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-      }
-      100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-      }
-    }
-
-
-    .current {
-      position: relative;
-      font-family: Arial;
-    }
-
-    .text-block {
-      position: absolute;
-      bottom: 20px;
-      right: 200px;
-      width: 1000px;
-      background: rgba(0, 0, 0, 0.5);
-      color: #ffffff;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-
-    .header {
-      font-family: calibri;
-      font-size: 12pt;
-      text-align: center;
-      padding-top: 20px;
-    }
-
-    select.drop {
-      text-align: center;
-      font-size: 16pt;
-      width: 250px;
-      height: 30px;
-      color: #808080;
-    }
-
-    .signupbtn {
-      padding: 14px 20px;
-      background-color: #800000;
-      margin-left: 80px;
-      margin-top: 15px;
-      color: #FFFFFF;
-    }
-
-    .form-edit {
-
-      margin-left: 450px;
-      margin-right: 450px;
-    }
-
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-
-    /*.row {
-      height: 100px
-    }*/
-
-    /* Set gray background color and 100% height */
-
-    .sidenav {
-      padding-top: 20px;
-      background-color: #fff;
-      height: 100%;
-      margin-top: 30px;
-      border-radius: 5px;
-    }
-
-    .row.content {
-      height: 700px;
-
-    }
-
-    @media screen and (max-width: 767px) {
-      .row.content {
-        height: auto;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      #topic {
-
-        font-size: 35px;
-        text-align: center;
-
-      }
-    }
-
-    @media screen and (max-width: 240px) {
-      #topic {
-
-        font-size: 25px;
-        text-align: center;
-
-      }
-    }
-
-
-    .sidenav p {
-      word-wrap: break-word;
-    }
-
-    #tech {
-      background-image: url('images/sport.jpg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      height: 100%;
-      width: 100%;
-      text-shadow: 2px 2px 2px #000000;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    #tech::after {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: " ";
-      position: absolute;
-      background: rgba(165, 152, 152, 0.20);
-    }
-
-    .bg-1 h1 {
-      font-family: Bungee, cursive;
-      color: #ffffff;
-      position: relative;
-      word-wrap: break-word;
-      top: 48%;
-    }
-
-    .card {
-      margin: 15px;
-      padding: 30px;
-    }
-
-    #members .container p,
-    h4 {
-      word-wrap: break-word;
-    }
-
-    #events .container a {
-      word-wrap: break-word;
-      display: inline;
-    }
-
-    #sideNavBar {
-      list-style-type: none;
-      margin: 0%;
-      padding: 0%;
-      width: 100%;
-    }
-
-    #topic {
-      font-family: 'Bungee', cursive;
-      color: #ffffff;
-      text-shadow: 2px 2px 2px #000000;
-      position: relative;
-      top: 40%;
-      z-index: 1;
-    }
-
-    .sidebarli {
-      padding: 0%;
-    }
-
-    .nav-link {
-      display: block;
-      color: #687074;
-      padding: 8px 16px;
-      text-decoration: none;
-
-    }
-
-    .nav-link:hover {
-      background-color: #e7e7e7;
-      color: #72c02c;
-      border-bottom: solid 2px #72c02c;
-      border-bottom-width: 2px;
-      border-bottom-style: solid;
-      border-bottom-color: rgb(114, 192, 44);
-    }
-
-    .eventname {
-      padding-top: 20px
-    }
-  </style>
+  <link rel="stylesheet" href="css/sports.css">
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -361,6 +49,50 @@
       messagingSenderId: "1059927379248"
     };
     firebase.initializeApp(config);
+  </script>
+  <script>
+    function signIn() {
+      var email = document.getElementById('eid').value;
+      var password = document.getElementById('pwd').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      // Sign in with email and pass.
+      // [START authwithemail]
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode === 'auth/wrong-password') {
+          alert('Wrong password.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+      });
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          window.location = 'admin.html';
+        }
+        else {
+          console.log('Not Signed In');
+        }
+      });
+    }
   </script>
 </head>
 
@@ -375,7 +107,7 @@
           <span class="icon-bar"></span>
         </button>
         <a href="index.html">
-          <img src="images/logo.png" height="50px" width="50px" align="left">
+          <img src="images/tech1.jpg" height="50px" width="50px" align="left">
         </a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -390,18 +122,55 @@
             <a href="tech.html">Technical wing</a>
           </li>
           <li>
+            <a href="alumnis.html">Alumnis</a>
+          </li>
+          <li>
             <a href="#events">Events</a>
           </li>
           <li>
-            <a href="alumnis.html">Alumnis</a>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="" data-toggle="modal" data-target="#signIn">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- The Modal -->
+  <div class="modal fade" id="signIn" style="padding-top:15%">
+    <div class="modal-dialog">
+      <div class="modal-content">
 
+        <!-- Modal Header -->
+        <div class="modal-header center">
+          <h3 class="modal-title ml-auto" style="color:#ffffff">Sign In</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
 
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div id="div-login-msg">
+            <h5 class="text-center">Enter your username and password</h5>
+          </div>
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" id="eid" placeholder="Email id">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="pwd" placeholder="Password">
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="btn btn-success btn-lg btn-block" id="btnLogin" onclick="signIn();">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="tech" class="container-fluid bg-1 text-center">
 
     <div id="topic" class="display-2">Sports wing</div>
@@ -419,26 +188,93 @@
 
 
       <div class="col-sm-10" style="float: right; padding-top:12px;">
-        <div class="card" id="content1"></div>
+        <div class="card" id="content1">
+          <div class="col-sm-3 sm-margin-bottom-20" style="float:right; margin-top:8%">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-sm-10" style="float: right">
-        <div class="card" id="content2"></div>
+        <div class="card" id="content2">
+          <div class="col-sm-3 sm-margin-bottom-20" style="float:right; margin-top:8%">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-sm-10" style="float: right">
-        <div class="card" id="content3"></div>
+        <div class="card" id="content3">
+          <div class="col-sm-3 sm-margin-bottom-20" style="float:right; margin-top:8%">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
     </div>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
   <div id="members" class="container-fluid" style="padding: 60px 50px">
     <h1>Members</h1>
@@ -547,7 +383,7 @@
           <!-- About -->
           <div class="col-md-3 md-margin-bottom-40">
             <a href="index-2.html">
-              <img id="logo-footer" class="footer-logo" src="images/logo.png" alt="">
+              <img id="logo-footer" class="footer-logo" src="images/tech1.jpg" width="100" height="100" alt="">
             </a>
             <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.
             </p>
@@ -692,52 +528,53 @@
     <!--/copyright-->
   </div>
 
-  <script>
-    function showData() {
-      var i = 1;
-      firebase.database().ref().child('events/sports').limitToLast(3).once('value', function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-          var eventName = document.createElement('h1');
-          var eventDate = document.createElement('h3');
-          var eventDesc = document.createElement('p');
-          var childData = childSnapshot.val();
-          eventName.setAttribute('class', 'eventname');
-          eventDate.innerHTML = childData.date;
-          eventName.innerHTML = childData.name;
-          eventDesc.innerHTML = childData.desc;
+  <!-- Modal -->
+  <div class="modal fade" id="eventModal" role="dialog" style="padding-top:8%">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" id="event"></h3>
+        </div>
+        <div class="modal-body">
+          <h4 id="date"></h4>
+          <div class="col-sm-5 sm-margin-bottom-20">
+            <div class="carousel slide" data-ride="carousel" id="blog-carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#blog-carousel" data-slide-to="0" class="active rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="1" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="2" class="rounded-x"></li>
+                <li data-target="#blog-carousel" data-slide-to="3" class="rounded-x"></li>
+              </ol>
 
-          var contentElement = document.getElementById('content' + i);
-          contentElement.appendChild(eventName);
-          contentElement.appendChild(eventDate);
-          contentElement.appendChild(eventDesc);
-          i++;
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="images/tech.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/cultural.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/social.jpg" alt="">
+                </div>
+                <div class="item">
+                  <img src="images/sport.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <p id="desc"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        });
-      });
-      showNavBar();
-    }
-
-    function showNavBar() {
-      var i = 1;
-      firebase.database().ref().child('events/sports').once('value', function (snapshot) {
-        snapshot.forEach(function (childSnapshot) {
-          var eventName = document.createElement('li');
-          var eventLink = document.createElement('a');
-          eventLink.setAttribute('href', '#');
-          eventLink.setAttribute('class', 'nav-link');
-          eventName.setAttribute('class', 'sidebarli');
-          var childData = childSnapshot.val();
-          eventLink.innerHTML = childData.name;
-
-          var unOrderedList = document.getElementById('sideNavBar');
-          eventName.appendChild(eventLink);
-          unOrderedList.appendChild(eventName);
-
-        });
-      });
-    }
-    window.onload = showData();
-  </script>
+  <script src="js/sports.js"></script>
   <script>
 
     $(window).scroll(function () {

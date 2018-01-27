@@ -1,0 +1,312 @@
+html,
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: #818181;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.container-fluid {
+  padding: 0px;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+
+.item span {
+  font-style: normal;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+
+
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+  color: #687074 !important;
+  font-size: 15px;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: #72c02c !important;
+  border-bottom: solid 2px #72c02c;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(114, 192, 44);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+
+.slideanim {
+  visibility: hidden;
+}
+
+.slide {
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+
+.current {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 200px;
+  width: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.header {
+  font-family: calibri;
+  font-size: 12pt;
+  text-align: center;
+  padding-top: 20px;
+}
+
+select.drop {
+  text-align: center;
+  font-size: 16pt;
+  width: 250px;
+  height: 30px;
+  color: #808080;
+}
+
+.form-edit {
+
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+/* .row {
+  height: 100px
+}*/
+
+/* Set gray background color and 100% height */
+
+.sidenav {
+  padding-top: 20px;
+  background-color: #fff;
+  height: 100%;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.row.content {
+  height: 700px;
+
+}
+
+@media screen and (max-width: 767px) {
+  .row.content {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #topic {
+
+    font-size: 35px;
+    text-align: center;
+
+  }
+}
+
+@media screen and (max-width: 240px) {
+  #topic {
+
+    font-size: 25px;
+    text-align: center;
+
+  }
+}
+
+
+.sidenav p {
+  word-wrap: break-word;
+}
+
+#cult {
+  background-image: url('../images/cultural.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  text-shadow: 2px 2px 2px #000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+
+}
+
+#cult::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  position: absolute;
+  background: rgba(165, 152, 152, 0.20);
+}
+
+.bg-1 h1 {
+  font-family: Bungee, cursive;
+  color: #ffffff;
+  position: relative;
+  word-wrap: break-word;
+  top: 48%;
+}
+
+.card {
+  margin: 15px;
+  padding: 30px;
+}
+
+#members .container p,
+h4 {
+  word-wrap: break-word;
+}
+
+#events .container a {
+  word-wrap: break-word;
+  display: inline;
+}
+
+#sideNavBar {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+}
+
+#topic {
+  font-family: 'Bungee', cursive;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #000000;
+  position: relative;
+  top: 40%;
+  z-index: 1;
+}
+
+.sidebarli {
+  padding: 0%;
+}
+
+.nav-link {
+  display: block;
+  color: #687074;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+
+.nav-link:hover {
+  background-color: #e7e7e7;
+  color: #72c02c;
+  border-bottom: solid 2px #72c02c;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(114, 192, 44);
+}
+
+.eventname {
+  padding-top: 20px
+}
+
+.modal-header,
+.close {
+  background-color: #5cb85c;
+  color: white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+}
