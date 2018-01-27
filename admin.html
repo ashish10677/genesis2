@@ -407,25 +407,18 @@
           <form>
             <label>Event Name</label>
             <br>
-            <input type="text" name="name" required>
+            <input type="text" id="name" required>
             <br>
-
-
-            <form>
-              <label>Date</label>
-              <br>
-              <input type="date" name="register">
-            </form>
+            <label>Date</label>
             <br>
-
+            <input type="date" id="date" required>
+            <br>
             <div class="form-group">
               <label for="description">Description of Event:</label>
-              <textarea class="form-control" rows="4" id="comment"></textarea>
+              <textarea class="form-control" rows="4" id="desc"></textarea>
             </div>
             <br>
-            <button type="button" class="btn" style="color:#ffffff; background:#72c02c">Submit</button>
-
-
+            <button type="button" class="btn" style="color:#ffffff; background:#72c02c" onclick="readIndex()">Submit</button>
           </form>
         </div>
       </div>
@@ -498,13 +491,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title" id="event"></h3>
+          <h3 class="modal-title" id="modalEvent"></h3>
         </div>
         <div class="modal-body">
-          <h4 id="date"></h4>
+          <h4 id="modalDate"></h4>
           <img src="https://firebasestorage.googleapis.com/v0/b/ashish10677-ce652.appspot.com/o/23473009_1450015725097680_2407537004374411144_n.jpg?alt=media&token=b7e9ee78-1896-45db-bdde-70157fcc67e9"
             height="30%" width="30%" id="modal-image">
-          <p id="desc"></p>
+          <p id="modalDesc"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger">Delete</button>
@@ -537,14 +530,8 @@
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
-          console.log(displayName);
-          console.log(email);
-          console.log(emailVerified);
-          console.log(photoURL);
-          console.log(uid);
           firebase.database().ref().child('events/tech').once('value', function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
-
               var eventName = document.createElement('li');
               var eventLink = document.createElement('a');
               var childData = childSnapshot.val();
@@ -572,15 +559,48 @@
     function data(dataKey) {
       console.log(dataKey);
       firebase.database().ref('/events/tech/' + dataKey).once('value').then(function (snapshot) {
-        document.getElementById('event').innerHTML = snapshot.val().name;
-        document.getElementById('date').innerHTML = snapshot.val().date;
-        document.getElementById('desc').innerHTML = snapshot.val().desc;
+        document.getElementById('modalEvent').innerHTML = snapshot.val().name;
+        document.getElementById('modalDate').innerHTML = snapshot.val().date;
+        console.log(document.getElementById('date'));
+        document.getElementById('modalDesc').innerHTML = snapshot.val().desc;
       });
     }
 
     function logout() {
       firebase.auth().signOut();
       window.location = 'index.html';
+    }
+
+    function readIndex() {
+      var database = firebase.database();
+      database.ref('events').child('tech').once('value', snap => {
+        if (snap.val() == null) {
+          writeUserData(1);
+        } else {
+          database.ref('events/tech').limitToLast(1).once('value', function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+              var childKey = childSnapshot.key;
+              writeUserData(parseInt(childKey) + 1);
+            });
+          });
+        }
+      });
+    }
+
+    function writeUserData(key) {
+      nm = document.getElementById('name').value;
+      dt = document.getElementById('date').value;
+      desc = document.getElementById('desc').value;
+      firebase.database().ref('events/tech/' + key).set({
+        date: dt,
+        desc: desc,
+        name: nm
+      });
+      alert("Event added successfully");
+      console.log(document.getElementById('name'));
+      document.getElementById('name').value = null;
+      document.getElementById('date').value = null;
+      document.getElementById('desc').value = null;
     }
     window.onload = showNavBar();
   </script>
