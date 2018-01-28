@@ -9,6 +9,43 @@
     };
     firebase.initializeApp(config);
     var wing;
+    var i;
+    var fileButton = document.getElementById('fileButton');
+    var uploader = document.getElementById('uploader');
+    fileButton.addEventListener('change', e => {
+        if (e.target.files.length > 3) {
+            alert('Maximum 3 files allowed');
+        } else {
+            for (i = 0; i < e.target.files.length; i++) {
+                var file = e.target.files[i];
+                if (file.size > 5242880) {
+                    console.log('Size of ' + file.name + ' is greater than 5 MB, it won\'t be uploaded.');
+                    fileButton.value = null;
+                } else {
+                    var storageRef = firebase.storage().ref(wing + '/' + document.getElementById('name').value + '/image' + i);
+                    var task = storageRef.put(file);
+
+                }
+            }
+            task.on('state_changed',
+                function progress(snapshot) {
+                    var percent = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    uploader.value = percent;
+                },
+
+                function error(err) {
+                    console.log(err);
+                },
+
+                function complete() {
+                    console.log('Images Uploaded');
+                    fileButton.value = null;
+                }
+
+            );
+        }
+
+    });
 
     function showNavBar() {
         firebase.auth().onAuthStateChanged(function (user) {
@@ -58,6 +95,18 @@
             document.getElementById('modalEvent').innerHTML = snapshot.val().name;
             document.getElementById('modalDate').innerHTML = snapshot.val().date;
             document.getElementById('modalDesc').innerHTML = snapshot.val().desc;
+            firebase.storage().ref(wing).child(snapshot.val().name + '/image0').getDownloadURL().then(function (url) {
+                console.log(url);
+                document.getElementById('carImage0').src = url;
+            });
+            firebase.storage().ref(wing).child(snapshot.val().name + '/image1').getDownloadURL().then(function (url) {
+                console.log(url);
+                document.getElementById('carImage1').src = url;
+            });
+            firebase.storage().ref(wing).child(snapshot.val().name + '/image2').getDownloadURL().then(function (url) {
+                console.log(url);
+                document.getElementById('carImage2').src = url;
+            });
         });
     }
 
@@ -91,16 +140,17 @@
             desc: desc,
             name: nm
         });
-        alert("Event added successfully");
-        location.reload(); 
+        //alert("Event added successfully");
         document.getElementById('name').value = null;
+        document.getElementById('fileButton').value = null;
         document.getElementById('date').value = null;
         document.getElementById('desc').value = null;
+        //location.reload();
     }
 
     function deleteData(key) {
         var database = firebase.database();
-        database.ref('events/'+wing+'/').child(key).remove();
+        database.ref('events/' + wing + '/').child(key).remove();
         location.reload();
     }
     window.onload = showNavBar();
