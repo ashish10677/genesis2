@@ -42,6 +42,19 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Bungee|PT+Sans+Caption" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
+            authDomain: "ashish10677-ce652.firebaseapp.com",
+            databaseURL: "https://ashish10677-ce652.firebaseio.com",
+            projectId: "ashish10677-ce652",
+            storageBucket: "ashish10677-ce652.appspot.com",
+            messagingSenderId: "1059927379248"
+        };
+        firebase.initializeApp(config);
+    </script>
 
 </head>
 
@@ -448,20 +461,34 @@
     <!-- JS Page Level -->
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="http://www.jacklmoore.com/colorbox/jquery.colorbox.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             App.init();
             StyleSwitcher.initStyleSwitcher();
         });
     </script>
-    <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
-<![endif]-->
+    <script>
+        $(document).ready(function () {
+            if (document.cookie.indexOf('visited=true') == -1) {
+                var oneDay = 1000 * 60 * 60 * 24 * 1;
+                var expires = new Date((new Date()).valueOf() + oneDay);
+                document.cookie = "visited=true;expires=" + expires.toUTCString();
+                setTimeout(openColorBox, 2000);
+            }
+
+            function openColorBox() {
+                $.colorbox({
+                    width: "50%",
+                    height: "60%",
+                    href: "upcoming.html"
+                });
+            }
+        });
+    </script>
 
 </body>
-
-<!-- Cloned by RabinsXP.com-->
 
 </html>
