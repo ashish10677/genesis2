@@ -64,7 +64,19 @@
           eventDate.innerHTML = childData.date;
           eventName.innerHTML = childData.name;
           eventDesc.innerHTML = childData.desc;
-
+          var img0, img1, img2;
+          img0 = 'carImage0'+i;
+          img1 = 'carImage1'+i;
+          img2 = 'carImage2'+i;
+          firebase.storage().ref('tech/').child(childSnapshot.val().name + '/image0').getDownloadURL().then(function (url) {
+            document.getElementById(img0).src = url;
+          });
+          firebase.storage().ref('tech').child(childSnapshot.val().name + '/image1').getDownloadURL().then(function (url) {           
+            document.getElementById(img1).src = url;
+          });
+          firebase.storage().ref('tech').child(childSnapshot.val().name + '/image2').getDownloadURL().then(function (url) {
+            document.getElementById(img2).src = url;
+          });
           var contentElement = document.getElementById('content' + i);
           contentElement.appendChild(eventName);
           contentElement.appendChild(eventDate);
@@ -100,11 +112,19 @@
     }
 
     function data(dataKey) {
-      console.log(dataKey);
       firebase.database().ref('/events/tech/' + dataKey).once('value').then(function (snapshot) {
         document.getElementById('event').innerHTML = snapshot.val().name;
         document.getElementById('date').innerHTML = snapshot.val().date;
         document.getElementById('desc').innerHTML = snapshot.val().desc;
+        firebase.storage().ref('tech/').child(snapshot.val().name + '/image0').getDownloadURL().then(function (url) {
+          document.getElementById('carImage0').src = url;
+        });
+        firebase.storage().ref('tech').child(snapshot.val().name + '/image1').getDownloadURL().then(function (url) {
+          document.getElementById('carImage1').src = url;
+        });
+        firebase.storage().ref('tech').child(snapshot.val().name + '/image2').getDownloadURL().then(function (url) {
+          document.getElementById('carImage2').src = url;
+        });
       });
     }
     window.onload = showData();
