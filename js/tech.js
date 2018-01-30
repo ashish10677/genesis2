@@ -1,3 +1,55 @@
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB2SNc-dwmQZ5awdTzDgtK71VPwMAclDzk",
+      authDomain: "ashish10677-ce652.firebaseapp.com",
+      databaseURL: "https://ashish10677-ce652.firebaseio.com",
+      projectId: "ashish10677-ce652",
+      storageBucket: "ashish10677-ce652.appspot.com",
+      messagingSenderId: "1059927379248"
+    };
+    firebase.initializeApp(config);
+
+    function signIn() {
+      var email = document.getElementById('eid').value;
+      var password = document.getElementById('pwd').value;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode === 'auth/wrong-password') {
+          alert('Wrong password.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+      });
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          window.location = 'admin.html';
+        } else {
+          console.log('Not Signed In');
+        }
+      });
+
+    }
+
     function showData() {
       var i = 1;
       firebase.database().ref().child('events/tech').limitToLast(3).once('value', function (snapshot) {
@@ -10,7 +62,19 @@
           eventDate.innerHTML = childData.date;
           eventName.innerHTML = childData.name;
           eventDesc.innerHTML = childData.desc;
-
+          var img0, img1, img2;
+          img0 = 'carImage0'+i;
+          img1 = 'carImage1'+i;
+          img2 = 'carImage2'+i;
+          firebase.storage().ref('tech/').child(childSnapshot.val().name + '/image0').getDownloadURL().then(function (url) {
+            document.getElementById(img0).src = url;
+          });
+          firebase.storage().ref('tech').child(childSnapshot.val().name + '/image1').getDownloadURL().then(function (url) {           
+            document.getElementById(img1).src = url;
+          });
+          firebase.storage().ref('tech').child(childSnapshot.val().name + '/image2').getDownloadURL().then(function (url) {
+            document.getElementById(img2).src = url;
+          });
           var contentElement = document.getElementById('content' + i);
           contentElement.appendChild(eventName);
           contentElement.appendChild(eventDate);
@@ -46,11 +110,19 @@
     }
 
     function data(dataKey) {
-      console.log(dataKey);
       firebase.database().ref('/events/tech/' + dataKey).once('value').then(function (snapshot) {
         document.getElementById('event').innerHTML = snapshot.val().name;
         document.getElementById('date').innerHTML = snapshot.val().date;
         document.getElementById('desc').innerHTML = snapshot.val().desc;
+        firebase.storage().ref('tech').child(snapshot.val().name + '/image0').getDownloadURL().then(function (url) {
+          document.getElementById('carImage0').src = url;
+        });
+        firebase.storage().ref('tech').child(snapshot.val().name + '/image1').getDownloadURL().then(function (url) {
+          document.getElementById('carImage1').src = url;
+        });
+        firebase.storage().ref('tech').child(snapshot.val().name + '/image2').getDownloadURL().then(function (url) {
+          document.getElementById('carImage2').src = url;
+        });
       });
     }
     window.onload = showData();
