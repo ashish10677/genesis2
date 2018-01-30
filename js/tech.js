@@ -20,8 +20,6 @@
         alert('Please enter a password.');
         return;
       }
-      // Sign in with email and pass.
-      // [START authwithemail]
       firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -116,7 +114,7 @@
         document.getElementById('event').innerHTML = snapshot.val().name;
         document.getElementById('date').innerHTML = snapshot.val().date;
         document.getElementById('desc').innerHTML = snapshot.val().desc;
-        firebase.storage().ref('tech/').child(snapshot.val().name + '/image0').getDownloadURL().then(function (url) {
+        firebase.storage().ref('tech').child(snapshot.val().name + '/image0').getDownloadURL().then(function (url) {
           document.getElementById('carImage0').src = url;
         });
         firebase.storage().ref('tech').child(snapshot.val().name + '/image1').getDownloadURL().then(function (url) {
